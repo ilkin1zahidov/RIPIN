@@ -344,7 +344,7 @@ header {
       i {
         cursor: pointer;
         transition: 0.5s;
-        color: $navbar-color;
+        color: $dark-color;
 
         @include tablet {
           font-size: 20px;
@@ -1060,10 +1060,17 @@ main {
     width: 100%;
     height: auto;
     .my-container {
-      padding: 5px 5px;
+      width: 100%;
+      height: auto;
+
       @include mobile {
         padding: 0px;
         margin-top: 5px;
+      }
+
+      @include tablet {
+        padding: 0px;
+        margin-left: 3px;
       }
       .racewear_all {
         width: 100%;
@@ -1104,169 +1111,501 @@ main {
           font-size: 42px;
 
           @include mobile {
-            top: 68px;
-            left: 127px;
-            font-size: 25px;
+            top: 71px;
+            left: 134px;
+            font-size: 28px;
+          }
+
+          @include tablet {
+            top: 76px;
+            left: 100px;
+            font-size: 42px;
           }
         }
+      }
+    }
 
-        .race_button {
-          .view_button {
-            position: absolute;
-            top: 268px;
-            left: 281px;
-            width: 197px;
-            height: 50px;
-            color: #f8f9fa;
-            transition: 0.7s;
-            background-color: rgba(255, 255, 255, 0.3);
-            border: 1px solid rgba(255, 255, 255, 0.3);
-            border-radius: 35px;
-            font-size: 14px;
+    .race_button {
+      .view_button {
+        position: absolute;
+        top: 268px;
+        left: 281px;
+        width: 197px;
+        height: 50px;
+        color: #f8f9fa;
+        transition: 0.7s;
+        background-color: rgba(255, 255, 255, 0.3);
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        border-radius: 35px;
+        font-size: 14px;
+        @include mobile {
+          top: 102px;
+          left: 120px;
+          font-size: 9px;
+          width: 150px;
+          height: 32px;
+        }
+
+        @include tablet {
+          top: 128px;
+          left: 94px;
+        }
+        &:hover {
+          transition: 0.7s;
+          background-color: $main-color;
+          color: $dark-color;
+        }
+      }
+    }
+
+    .origin {
+      position: absolute;
+      top: 210px;
+      right: 267px;
+
+      color: $main-color;
+      font-size: 42px;
+      @include mobile {
+        top: 276px;
+        font-size: 28px;
+       right: 112px;
+        position: absolute;
+      }
+
+      @include tablet {
+        top: 76px;
+        right: 84px;
+      }
+    }
+
+    .origin_button {
+      .buy_button {
+        position: absolute;
+        top: 268px;
+        right: 281px;
+        width: 197px;
+        height: 50px;
+        color: #f8f9fa;
+        transition: 0.7s;
+        background-color: rgba(255, 255, 255, 0.3);
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        border-radius: 35px;
+        font-size: 14px;
+        @include mobile {
+          left: 32%;
+          font-size: 9px;
+          width: 150px;
+          height: 32px;
+          top: 312px;
+}
+        }
+
+        @include tablet {
+          top: 128px;
+          right: 92px;
+        }
+        &:hover {
+          transition: 0.7s;
+          background-color: $main-color;
+          color: $dark-color;
+        }
+      }
+    }
+
+    .street {
+      position: absolute;
+      bottom: 247px;
+      left: 278px;
+      color: $main-color;
+      font-size: 42px;
+
+      @include mobile {
+        font-size: 28px;
+         position: absolute;
+         left: 116px;
+         bottom: 306px;
+      }
+
+      @include tablet {
+        bottom: 127px;
+        left: 83px;
+      }
+    }
+
+    .street_button {
+      .vieww_button {
+        position: absolute;
+        bottom: 195px;
+        left: 284px;
+        width: 197px;
+        height: 50px;
+        color: #f8f9fa;
+        transition: 0.7s;
+        background-color: rgba(255, 255, 255, 0.3);
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        border-radius: 35px;
+        font-size: 14px;
+
+        @include mobile {
+          left: 28%;
+          font-size: 9px;
+          width: 150px;
+          height: 32px;
+          bottom: 285px;
+        }
+
+        @include tablet {
+          bottom: 81px;
+          left: 82px;
+        }
+
+        &:hover {
+          transition: 0.7s;
+          background-color: $main-color;
+          color: $dark-color;
+        }
+      }
+    }
+
+    .basic {
+      position: absolute;
+      bottom: 247px;
+      right: 278px;
+      color: $main-color;
+      font-size: 42px;
+
+      @include mobile {
+        font-size: 28px;
+        position: absolute;
+        right: 29%;
+        bottom: 95px;
+      
+      }
+
+      @include tablet {
+        bottom: 127px;
+        right: 83px;
+      }
+    }
+
+    .basic_button {
+      .buyy_button {
+        position: absolute;
+        bottom: 195px;
+        right: 284px;
+        width: 197px;
+        height: 50px;
+        color: #f8f9fa;
+        transition: 0.7s;
+        background-color: rgba(255, 255, 255, 0.3);
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        border-radius: 35px;
+        font-size: 14px;
+
+        @include mobile {
+          left: 30%;
+          font-size: 9px;
+          width: 150px;
+          height: 32px;
+          bottom: 74px;
+        }
+
+        @include tablet {
+          bottom: 81px;
+          right: 92px;
+        }
+
+        &:hover {
+          transition: 0.7s;
+          background-color: $main-color;
+          color: $dark-color;
+        }
+      }
+    }
+  }
+
+footer {
+  #contact--us {
+    width: 100%;
+    height: auto;
+    background-color: $footer-color;
+    color: $main-color;
+
+   
+    .container {
+      width: 100%;
+      height: auto;
+      padding: 70px 90px;
+ 
+
+      @include mobile {
+        padding: 40px 20px;
+
+      }
+
+      @include tablet {
+        padding: 70px 10px;
+      }
+      
+      .contact--all {
+        width: 100%;
+        height: auto;
+        display: flex;
+        @include mobile{
+          position: relative;
+          flex-direction: column;
+        }
+       
+
+        .contact-login {
+          width: 50%;
+          height: auto;
+          @include mobile{
+            width: 100%;
+          }
+          .footer_logo {
+            width: 30%;
+            height: auto;
+
             @include mobile {
-              top: 99px;
-              left: 109px;
-              font-size: 9px;
-              width: 142px;
-              height: 32px;
+              width: 43%;
             }
-            &:hover {
-              transition: 0.7s;
-              background-color: $main-color;
-              color: $dark-color;
+
+            @include tablet{
+              width: 45% !important;
+            }
+
+            img {
+              width: 100%;
+              height: auto;
+              margin-bottom: 28px;
+            }
+          }
+          .footer_form {
+            .footer_text {
+              padding: 4px 0px;
+              @include mobile {
+                padding: 0px;
+                margin-bottom: 14px;
+              }
+              .news {
+                font-weight: 900;
+                margin: 18px 0px;
+              }
+              .news_info {
+                font-size: 13px;
+
+                @include mobile{
+                  display: none !important;
+                }
+
+                @include tablet {
+                  display: none !important;
+                }
+              }
+
+              .newss_info{
+                display: none;
+
+                @include mobile {
+                  display: block;
+                  font-size: 12px;
+                }
+
+                @include tablet {
+                  display: block;
+                  font-size: 12px;
+                }
+              }
+            }
+            form {
+              input {
+                width: 38.6%;
+                height: 45px;
+                padding: 0px 0px 0px 15px;
+                background-color: $input-color;
+                outline: none;
+                border: none;
+                margin-bottom: 14px;
+                color: $main-color;
+
+                @include mobile{
+                  width: 100%;
+
+                }
+
+                @include tablet {
+                  width: 47.1%;
+                }
+                &::placeholder {
+                  color: $main-color;
+                  font-size: 13px;
+                }
+              }
+
+              .video_button {
+                .explore_button {
+                  width: 244px;
+                  height: 45px;
+                  color: $dark-color;
+                  transition: 0.7s;
+                  background-color: $main-color;
+                  border: 1px solid $main-color;
+                  border-radius: 35px;
+                  font-size: 13px;
+                  margin-bottom: 50px;
+
+                  @include mobile{
+                    width: 100%;
+
+                  }
+                  @include tablet {
+                    width: 205px;
+                  }
+                  &:hover {
+                    transition: 0.7s;
+                    background-color: $main-color;
+                    color: $dark-color;
+                  }
+                }
+              }
+            }
+          }
+          .payments-methods {
+            margin-top: 20px;
+
+            @include mobile {
+              position: absolute;
+              bottom: -121px;
+            }
+
+          }
+          .payments_text {
+            color: $main-color;
+          }
+          .pay_all {
+            img {
+              width: 44px;
+              height: 33.58px;
+              margin-bottom: 20px;
+              margin-right: 16px;
+            }
+          }
+          .footer_end {
+            line-height: 17px;
+            position: relative;
+
+            @include mobile {
+              display: none;
+            }
+            top: 50px;
+            .ripin_copyright {
+              font-size: 11px;
+              line-height: 0.5;
+              color: lightgrey;
             }
           }
         }
+      }
 
-        .origin {
-          position: absolute;
-          top: 202px;
-          right: 266px;
-          color: $main-color;
-          font-size: 42px;
+      .contact-support {
+        width: 50%;
+        height: auto;
+        padding: 80px 20px;
+        @include mobile {
+          width: 100%;
+          padding: 0px 2px;
+        }
+
+        @include tablet {
+          padding: 80px 0px;
+       
+        }
+        .support_all {
+          display: flex;
+          margin-top: 5px;
           @include mobile {
-            top: 280px;
-            font-size: 22px;
-            right: 130px;
-            position: absolute;
+            margin-top: 20px;
+            flex-wrap: wrap;
           }
-        }
 
-        .origin_button {
-          .buy_button {
-            position: absolute;
-            top: 261px;
-            right: 292px;
-            width: 197px;
-            height: 50px;
-            color: #f8f9fa;
-            transition: 0.7s;
-            background-color: rgba(255, 255, 255, 0.3);
-            border: 1px solid rgba(255, 255, 255, 0.3);
-            border-radius: 35px;
-            font-size: 14px;
+          .support {
             @include mobile {
-              left: 33%;
-              font-size: 9px;
-              width: 142px;
-              height: 32px;
-              top: 312px;
+              padding: 3px 1px;
             }
-            &:hover {
-              transition: 0.7s;
-              background-color: $main-color;
-              color: $dark-color;
+            .support_head {
+              color: $main-color;
+              font-weight: 900;
+              font-size: 15px;
             }
+            li {
+              padding: 12px 0px;
+              font-size: 13px;
+              @include mobile {
+                padding: 6px 0px;
+              }
+            }
+            a {
+              text-decoration: none;
+              color: gray;
+            }
+            list-style: none;
           }
-        }
-
-        .street {
-          position: absolute;
-          bottom: 247px;
-          left: 278px;
-          color: $main-color;
-          font-size: 42px;
-
-          @include mobile {
-            font-size: 22px;
-            position: absolute;
-            left: 126px;
-            bottom: 310px;
-          }
-        }
-
-        .street_button {
-          .vieww_button {
-            position: absolute;
-            bottom: 195px;
-            left: 284px;
-            width: 197px;
-            height: 50px;
-            color: #f8f9fa;
-            transition: 0.7s;
-            background-color: rgba(255, 255, 255, 0.3);
-            border: 1px solid rgba(255, 255, 255, 0.3);
-            border-radius: 35px;
-            font-size: 14px;
+          .about {
+            padding: 0px 53px;
+            @include mobile {
+              padding: 0px 53px !important;
+            }
+            @include tablet {
+              padding: 0px !important
+            }
+            .about_head {
+              color: $main-color;
+              font-weight: 900;
+              font-size: 15px;
+            }
+     
 
             @include mobile {
-              left: 29%;
-              font-size: 9px;
-              width: 142px;
-              height: 32px;
-              bottom: 285px;
+              padding: 0px;
             }
-
-            &:hover {
-              transition: 0.7s;
-              background-color: $main-color;
-              color: $dark-color;
+            list-style: none;
+            li {
+              padding: 12px 0px;
+              font-size: 13px;
+              @include mobile {
+           
+                padding: 6px 0px;
+              }
+            }
+            a {
+              text-decoration: none;
+              color: gray;
             }
           }
-        }
 
-        .basic {
-          position: absolute;
-          right: 262px;
-          bottom: 251px;
-          color: $main-color;
-          font-size: 42px;
-
-          @include mobile {
-            font-size: 22px;
-            position: absolute;
-            right: 33%;
-            bottom: 13%;
-            z-index: 97;
-          }
-        }
-
-        .basic_button {
-          .buyy_button {
-            position: absolute;
-            bottom: 199px;
-            right: 281px;
-            width: 197px;
-            height: 50px;
-            color: #f8f9fa;
-            transition: 0.7s;
-            background-color: rgba(255, 255, 255, 0.3);
-            border: 1px solid rgba(255, 255, 255, 0.3);
-            border-radius: 35px;
-            font-size: 14px;
+          .contact {
 
             @include mobile {
-              left: 32%;
-              font-size: 9px;
-              width: 142px;
-              height: 32px;
-              bottom: 74px;
+              padding: 3px 1px;
+            }
+            .contact_head {
+              color: $main-color;
+              font-weight: 900;
+              font-size: 15px;
             }
 
-            &:hover {
-              transition: 0.7s;
-              background-color: $main-color;
-              color: $dark-color;
+            list-style: none;
+            li {
+              padding: 12px 0px;
+              font-size: 13px;
+              @include mobile {
+                padding: 6px 0px;
+              }
+            }
+            a {
+              text-decoration: none;
+              color: gray;
             }
           }
         }
@@ -1307,6 +1646,11 @@ main {
   .icons {
     i {
       color: $main-color !important;
+    }
+
+    .userss {
+      background-color: $main-color !important;
+      border-radius: 50% !important;
     }
   }
   a {

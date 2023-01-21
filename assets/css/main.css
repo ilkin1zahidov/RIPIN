@@ -327,7 +327,7 @@ header .container .icons {
 header .container .icons i {
   cursor: pointer;
   transition: 0.5s;
-  color: rgba(0, 0, 0, 0.5);
+  color: #000000;
 }
 @media (min-width: 768px) and (max-width: 991px) {
   header .container .icons i {
@@ -1056,12 +1056,19 @@ main #racewear {
   height: auto;
 }
 main #racewear .my-container {
-  padding: 5px 5px;
+  width: 100%;
+  height: auto;
 }
 @media (max-width: 767px) {
   main #racewear .my-container {
     padding: 0px;
     margin-top: 5px;
+  }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  main #racewear .my-container {
+    padding: 0px;
+    margin-left: 3px;
   }
 }
 main #racewear .my-container .racewear_all {
@@ -1108,12 +1115,19 @@ main #racewear .my-container .race .wear {
 }
 @media (max-width: 767px) {
   main #racewear .my-container .race .wear {
-    top: 68px;
-    left: 127px;
-    font-size: 25px;
+    top: 71px;
+    left: 134px;
+    font-size: 28px;
   }
 }
-main #racewear .my-container .race .race_button .view_button {
+@media (min-width: 768px) and (max-width: 991px) {
+  main #racewear .my-container .race .wear {
+    top: 76px;
+    left: 100px;
+    font-size: 42px;
+  }
+}
+main #racewear .race_button .view_button {
   position: absolute;
   top: 268px;
   left: 281px;
@@ -1127,38 +1141,50 @@ main #racewear .my-container .race .race_button .view_button {
   font-size: 14px;
 }
 @media (max-width: 767px) {
-  main #racewear .my-container .race .race_button .view_button {
-    top: 99px;
-    left: 109px;
+  main #racewear .race_button .view_button {
+    top: 102px;
+    left: 120px;
     font-size: 9px;
-    width: 142px;
+    width: 150px;
     height: 32px;
   }
 }
-main #racewear .my-container .race .race_button .view_button:hover {
+@media (min-width: 768px) and (max-width: 991px) {
+  main #racewear .race_button .view_button {
+    top: 128px;
+    left: 94px;
+  }
+}
+main #racewear .race_button .view_button:hover {
   transition: 0.7s;
   background-color: #f8f9fa;
   color: #000000;
 }
-main #racewear .my-container .race .origin {
+main #racewear .origin {
   position: absolute;
-  top: 202px;
-  right: 266px;
+  top: 210px;
+  right: 267px;
   color: #f8f9fa;
   font-size: 42px;
 }
 @media (max-width: 767px) {
-  main #racewear .my-container .race .origin {
-    top: 280px;
-    font-size: 22px;
-    right: 130px;
+  main #racewear .origin {
+    top: 276px;
+    font-size: 28px;
+    right: 112px;
     position: absolute;
   }
 }
-main #racewear .my-container .race .origin_button .buy_button {
+@media (min-width: 768px) and (max-width: 991px) {
+  main #racewear .origin {
+    top: 76px;
+    right: 84px;
+  }
+}
+main #racewear .origin_button .buy_button {
   position: absolute;
-  top: 261px;
-  right: 292px;
+  top: 268px;
+  right: 281px;
   width: 197px;
   height: 50px;
   color: #f8f9fa;
@@ -1169,20 +1195,26 @@ main #racewear .my-container .race .origin_button .buy_button {
   font-size: 14px;
 }
 @media (max-width: 767px) {
-  main #racewear .my-container .race .origin_button .buy_button {
-    left: 33%;
+  main #racewear .origin_button .buy_button {
+    left: 32%;
     font-size: 9px;
-    width: 142px;
+    width: 150px;
     height: 32px;
     top: 312px;
   }
 }
-main #racewear .my-container .race .origin_button .buy_button:hover {
+@media (min-width: 768px) and (max-width: 991px) {
+  main #racewear .origin_button {
+    top: 128px;
+    right: 92px;
+  }
+}
+main #racewear .origin_button:hover {
   transition: 0.7s;
   background-color: #f8f9fa;
   color: #000000;
 }
-main #racewear .my-container .race .street {
+main .street {
   position: absolute;
   bottom: 247px;
   left: 278px;
@@ -1190,14 +1222,20 @@ main #racewear .my-container .race .street {
   font-size: 42px;
 }
 @media (max-width: 767px) {
-  main #racewear .my-container .race .street {
-    font-size: 22px;
+  main .street {
+    font-size: 28px;
     position: absolute;
-    left: 126px;
-    bottom: 310px;
+    left: 116px;
+    bottom: 306px;
   }
 }
-main #racewear .my-container .race .street_button .vieww_button {
+@media (min-width: 768px) and (max-width: 991px) {
+  main .street {
+    bottom: 127px;
+    left: 83px;
+  }
+}
+main .street_button .vieww_button {
   position: absolute;
   bottom: 195px;
   left: 284px;
@@ -1211,39 +1249,50 @@ main #racewear .my-container .race .street_button .vieww_button {
   font-size: 14px;
 }
 @media (max-width: 767px) {
-  main #racewear .my-container .race .street_button .vieww_button {
-    left: 29%;
+  main .street_button .vieww_button {
+    left: 28%;
     font-size: 9px;
-    width: 142px;
+    width: 150px;
     height: 32px;
     bottom: 285px;
   }
 }
-main #racewear .my-container .race .street_button .vieww_button:hover {
+@media (min-width: 768px) and (max-width: 991px) {
+  main .street_button .vieww_button {
+    bottom: 81px;
+    left: 82px;
+  }
+}
+main .street_button .vieww_button:hover {
   transition: 0.7s;
   background-color: #f8f9fa;
   color: #000000;
 }
-main #racewear .my-container .race .basic {
+main .basic {
   position: absolute;
-  right: 262px;
-  bottom: 251px;
+  bottom: 247px;
+  right: 278px;
   color: #f8f9fa;
   font-size: 42px;
 }
 @media (max-width: 767px) {
-  main #racewear .my-container .race .basic {
-    font-size: 22px;
+  main .basic {
+    font-size: 28px;
     position: absolute;
-    right: 33%;
-    bottom: 13%;
-    z-index: 97;
+    right: 29%;
+    bottom: 95px;
   }
 }
-main #racewear .my-container .race .basic_button .buyy_button {
+@media (min-width: 768px) and (max-width: 991px) {
+  main .basic {
+    bottom: 127px;
+    right: 83px;
+  }
+}
+main .basic_button .buyy_button {
   position: absolute;
-  bottom: 199px;
-  right: 281px;
+  bottom: 195px;
+  right: 284px;
   width: 197px;
   height: 50px;
   color: #f8f9fa;
@@ -1254,18 +1303,332 @@ main #racewear .my-container .race .basic_button .buyy_button {
   font-size: 14px;
 }
 @media (max-width: 767px) {
-  main #racewear .my-container .race .basic_button .buyy_button {
-    left: 32%;
+  main .basic_button .buyy_button {
+    left: 30%;
     font-size: 9px;
-    width: 142px;
+    width: 150px;
     height: 32px;
     bottom: 74px;
   }
 }
-main #racewear .my-container .race .basic_button .buyy_button:hover {
+@media (min-width: 768px) and (max-width: 991px) {
+  main .basic_button .buyy_button {
+    bottom: 81px;
+    right: 92px;
+  }
+}
+main .basic_button .buyy_button:hover {
   transition: 0.7s;
   background-color: #f8f9fa;
   color: #000000;
+}
+
+footer #contact--us {
+  width: 100%;
+  height: auto;
+  background-color: #0f0f0f;
+  color: #f8f9fa;
+}
+footer #contact--us .container {
+  width: 100%;
+  height: auto;
+  padding: 70px 90px;
+}
+@media (max-width: 767px) {
+  footer #contact--us .container {
+    padding: 40px 20px;
+  }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  footer #contact--us .container {
+    padding: 70px 10px;
+  }
+}
+footer #contact--us .container .contact--all {
+  width: 100%;
+  height: auto;
+  display: flex;
+}
+@media (max-width: 767px) {
+  footer #contact--us .container .contact--all {
+    position: relative;
+    flex-direction: column;
+  }
+}
+footer #contact--us .container .contact--all .contact-login {
+  width: 50%;
+  height: auto;
+}
+@media (max-width: 767px) {
+  footer #contact--us .container .contact--all .contact-login {
+    width: 100%;
+  }
+}
+footer #contact--us .container .contact--all .contact-login .footer_logo {
+  width: 30%;
+  height: auto;
+}
+@media (max-width: 767px) {
+  footer #contact--us .container .contact--all .contact-login .footer_logo {
+    width: 43%;
+  }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  footer #contact--us .container .contact--all .contact-login .footer_logo {
+    width: 45% !important;
+  }
+}
+footer #contact--us .container .contact--all .contact-login .footer_logo img {
+  width: 100%;
+  height: auto;
+  margin-bottom: 28px;
+}
+footer #contact--us .container .contact--all .contact-login .footer_form .footer_text {
+  padding: 4px 0px;
+}
+@media (max-width: 767px) {
+  footer #contact--us .container .contact--all .contact-login .footer_form .footer_text {
+    padding: 0px;
+    margin-bottom: 14px;
+  }
+}
+footer #contact--us .container .contact--all .contact-login .footer_form .footer_text .news {
+  font-weight: 900;
+  margin: 18px 0px;
+}
+footer #contact--us .container .contact--all .contact-login .footer_form .footer_text .news_info {
+  font-size: 13px;
+}
+@media (max-width: 767px) {
+  footer #contact--us .container .contact--all .contact-login .footer_form .footer_text .news_info {
+    display: none !important;
+  }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  footer #contact--us .container .contact--all .contact-login .footer_form .footer_text .news_info {
+    display: none !important;
+  }
+}
+footer #contact--us .container .contact--all .contact-login .footer_form .footer_text .newss_info {
+  display: none;
+}
+@media (max-width: 767px) {
+  footer #contact--us .container .contact--all .contact-login .footer_form .footer_text .newss_info {
+    display: block;
+    font-size: 12px;
+  }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  footer #contact--us .container .contact--all .contact-login .footer_form .footer_text .newss_info {
+    display: block;
+    font-size: 12px;
+  }
+}
+footer #contact--us .container .contact--all .contact-login .footer_form form input {
+  width: 38.6%;
+  height: 45px;
+  padding: 0px 0px 0px 15px;
+  background-color: #070707;
+  outline: none;
+  border: none;
+  margin-bottom: 14px;
+  color: #f8f9fa;
+}
+@media (max-width: 767px) {
+  footer #contact--us .container .contact--all .contact-login .footer_form form input {
+    width: 100%;
+  }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  footer #contact--us .container .contact--all .contact-login .footer_form form input {
+    width: 47.1%;
+  }
+}
+footer #contact--us .container .contact--all .contact-login .footer_form form input::-moz-placeholder {
+  color: #f8f9fa;
+  font-size: 13px;
+}
+footer #contact--us .container .contact--all .contact-login .footer_form form input:-ms-input-placeholder {
+  color: #f8f9fa;
+  font-size: 13px;
+}
+footer #contact--us .container .contact--all .contact-login .footer_form form input::placeholder {
+  color: #f8f9fa;
+  font-size: 13px;
+}
+footer #contact--us .container .contact--all .contact-login .footer_form form .video_button .explore_button {
+  width: 244px;
+  height: 45px;
+  color: #000000;
+  transition: 0.7s;
+  background-color: #f8f9fa;
+  border: 1px solid #f8f9fa;
+  border-radius: 35px;
+  font-size: 13px;
+  margin-bottom: 50px;
+}
+@media (max-width: 767px) {
+  footer #contact--us .container .contact--all .contact-login .footer_form form .video_button .explore_button {
+    width: 100%;
+  }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  footer #contact--us .container .contact--all .contact-login .footer_form form .video_button .explore_button {
+    width: 205px;
+  }
+}
+footer #contact--us .container .contact--all .contact-login .footer_form form .video_button .explore_button:hover {
+  transition: 0.7s;
+  background-color: #f8f9fa;
+  color: #000000;
+}
+footer #contact--us .container .contact--all .contact-login .payments-methods {
+  margin-top: 20px;
+}
+@media (max-width: 767px) {
+  footer #contact--us .container .contact--all .contact-login .payments-methods {
+    position: absolute;
+    bottom: -121px;
+  }
+}
+footer #contact--us .container .contact--all .contact-login .payments_text {
+  color: #f8f9fa;
+}
+footer #contact--us .container .contact--all .contact-login .pay_all img {
+  width: 44px;
+  height: 33.58px;
+  margin-bottom: 20px;
+  margin-right: 16px;
+}
+footer #contact--us .container .contact--all .contact-login .footer_end {
+  line-height: 17px;
+  position: relative;
+  top: 50px;
+}
+@media (max-width: 767px) {
+  footer #contact--us .container .contact--all .contact-login .footer_end {
+    display: none;
+  }
+}
+footer #contact--us .container .contact--all .contact-login .footer_end .ripin_copyright {
+  font-size: 11px;
+  line-height: 0.5;
+  color: lightgrey;
+}
+footer #contact--us .container .contact-support {
+  width: 50%;
+  height: auto;
+  padding: 80px 20px;
+}
+@media (max-width: 767px) {
+  footer #contact--us .container .contact-support {
+    width: 100%;
+    padding: 0px 2px;
+  }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  footer #contact--us .container .contact-support {
+    padding: 80px 0px;
+  }
+}
+footer #contact--us .container .contact-support .support_all {
+  display: flex;
+  margin-top: 5px;
+}
+@media (max-width: 767px) {
+  footer #contact--us .container .contact-support .support_all {
+    margin-top: 20px;
+    flex-wrap: wrap;
+  }
+}
+footer #contact--us .container .contact-support .support_all .support {
+  list-style: none;
+}
+@media (max-width: 767px) {
+  footer #contact--us .container .contact-support .support_all .support {
+    padding: 3px 1px;
+  }
+}
+footer #contact--us .container .contact-support .support_all .support .support_head {
+  color: #f8f9fa;
+  font-weight: 900;
+  font-size: 15px;
+}
+footer #contact--us .container .contact-support .support_all .support li {
+  padding: 12px 0px;
+  font-size: 13px;
+}
+@media (max-width: 767px) {
+  footer #contact--us .container .contact-support .support_all .support li {
+    padding: 6px 0px;
+  }
+}
+footer #contact--us .container .contact-support .support_all .support a {
+  text-decoration: none;
+  color: gray;
+}
+footer #contact--us .container .contact-support .support_all .about {
+  padding: 0px 53px;
+  list-style: none;
+}
+@media (max-width: 767px) {
+  footer #contact--us .container .contact-support .support_all .about {
+    padding: 0px 53px !important;
+  }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  footer #contact--us .container .contact-support .support_all .about {
+    padding: 0px !important;
+  }
+}
+footer #contact--us .container .contact-support .support_all .about .about_head {
+  color: #f8f9fa;
+  font-weight: 900;
+  font-size: 15px;
+}
+@media (max-width: 767px) {
+  footer #contact--us .container .contact-support .support_all .about {
+    padding: 0px;
+  }
+}
+footer #contact--us .container .contact-support .support_all .about li {
+  padding: 12px 0px;
+  font-size: 13px;
+}
+@media (max-width: 767px) {
+  footer #contact--us .container .contact-support .support_all .about li {
+    padding: 6px 0px;
+  }
+}
+footer #contact--us .container .contact-support .support_all .about a {
+  text-decoration: none;
+  color: gray;
+}
+footer #contact--us .container .contact-support .support_all .contact {
+  list-style: none;
+}
+@media (max-width: 767px) {
+  footer #contact--us .container .contact-support .support_all .contact {
+    padding: 3px 1px;
+  }
+}
+footer #contact--us .container .contact-support .support_all .contact .contact_head {
+  color: #f8f9fa;
+  font-weight: 900;
+  font-size: 15px;
+}
+footer #contact--us .container .contact-support .support_all .contact li {
+  padding: 12px 0px;
+  font-size: 13px;
+}
+@media (max-width: 767px) {
+  footer #contact--us .container .contact-support .support_all .contact li {
+    padding: 6px 0px;
+  }
+}
+footer #contact--us .container .contact-support .support_all .contact a {
+  text-decoration: none;
+  color: gray;
 }
 
 .darks {
@@ -1297,6 +1660,10 @@ main #racewear .my-container .race .basic_button .buyy_button:hover {
 }
 .darks .icons i {
   color: #f8f9fa !important;
+}
+.darks .icons .userss {
+  background-color: #f8f9fa !important;
+  border-radius: 50% !important;
 }
 .darks a {
   color: #f8f9fa !important;
