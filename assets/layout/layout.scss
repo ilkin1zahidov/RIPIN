@@ -1,0 +1,668 @@
+header {
+    #nav--head {
+      width: 100%;
+      height: auto;
+      z-index: 2;
+  
+      .sidebar {
+        display: none;
+        @include mobile {
+          display: block !important;
+          font-size: 24px;
+          cursor: pointer;
+        }
+  
+        @include tablet {
+          display: block !important;
+          font-size: 30px;
+          cursor: pointer;
+        }
+      }
+    }
+    .container {
+      width: 100%;
+      height: auto;
+      background-color: #f8f9fa;
+      .nav_head {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 999;
+        width: 100%;
+        padding: 17px 40px;
+        background-color: rgba(255, 255, 255, 0.3);
+  
+        @include mobile {
+          padding: 17px 8px;
+        }
+  
+        @include tablet {
+          padding: 17px 8px;
+        }
+        a {
+          color: rgba(0, 0, 0, 0.5);
+          text-decoration: none;
+          font-size: 14px;
+        }
+  
+        .nav-logo {
+          img {
+            @include mobile {
+              margin-left: 24px;
+            }
+  
+            @include tablet {
+              margin-left: 40px;
+            }
+          }
+        }
+        .product_list {
+          position: relative;
+          display: flex;
+          margin: 0;
+          list-style: none;
+          justify-content: space-between;
+          width: 40%;
+          align-items: center;
+          .closeBarr {
+            width: 40px;
+            height: 40px;
+            position: absolute;
+            top: 9px;
+            left: 1px;
+            transition: all 2.2s;
+  
+            display: none;
+  
+            @include mobile {
+              display: block;
+  
+              .closeone {
+                width: 24px;
+                height: 2px;
+                color: $dark-color;
+                position: absolute;
+                left: -11px;
+                transition: all 0.3s ease;
+                top: -14px;
+                &:first-child {
+                  transform: rotate(45deg) translateY(-23px);
+                  transition: all 0.3s ease;
+                  background-color: $dark-color;
+                }
+              }
+  
+              .closetwo {
+                width: 24px;
+                height: 2px;
+  
+                position: absolute;
+                left: -8px;
+                transition: all 0.3s ease;
+                top: -44px;
+  
+                &:last-child {
+                  background-color: $dark-color;
+                  transform: rotate(136deg) translateY(-19px);
+                  transition: all 0.3s ease;
+                }
+              }
+            }
+            @include tablet {
+              display: block;
+  
+              .closeone {
+                width: 24px;
+                height: 2px;
+                background-color: #fff;
+                position: absolute;
+                left: -11px;
+                transition: all 0.3s ease;
+                top: -14px;
+                &:first-child {
+                  transform: rotate(45deg) translateY(-23px);
+                  transition: all 0.3s ease;
+                }
+              }
+  
+              .closetwo {
+                width: 24px;
+                height: 2px;
+                background-color: #fff;
+                position: absolute;
+                left: -8px;
+                transition: all 0.3s ease;
+                top: -44px;
+  
+                &:last-child {
+                  transform: rotate(136deg) translateY(-19px);
+                }
+              }
+            }
+          }
+          @include mobile {
+            background-color: $dark-color;
+            text-align: center;
+            transition: 0.5s;
+            position: fixed;
+            top: 57px;
+            left: 0;
+            height: 61px;
+            width: 390px !important;
+            opacity: 0;
+            visibility: hidden;
+            padding: 22px 30px;
+            .closeBar {
+              position: absolute;
+              cursor: pointer;
+              top: 57px;
+              left: 0;
+            }
+  
+            a {
+              color: $main-color !important;
+            }
+          }
+          @include tablet {
+            background-color: $dark-color;
+            text-align: center;
+            transition: 0.5s;
+            position: fixed;
+            top: 57px;
+            left: 0;
+            height: 61px;
+            width: 767px !important;
+            opacity: 0;
+            visibility: hidden;
+            padding: 22px 32px;
+            .closeBar {
+              position: absolute;
+              cursor: pointer;
+              top: 57px;
+              left: 0;
+            }
+  
+            a {
+              color: $main-color !important;
+            }
+          }
+          a {
+            color: rgba(0, 0, 0, 0.5);
+            text-decoration: none;
+            transition: 0.4s;
+            &:hover {
+              transition: 0.4s;
+              color: $dark-color;
+            }
+          }
+  
+          .new {
+            cursor: pointer;
+            a {
+              color: rgba(0, 0, 0, 0.5);
+              transition: 0.7s;
+            }
+            &:hover {
+              &::after {
+                content: "";
+                position: absolute;
+                border: 1px solid $main-color;
+                width: 42px;
+                top: 50px;
+                left: 25px;
+                transition: 0.7s;
+              }
+            }
+          }
+          .race {
+            cursor: pointer;
+            a {
+              color: rgba(0, 0, 0, 0.5);
+            }
+  
+            &:hover {
+              &::after {
+                content: "";
+                position: absolute;
+                border: 1px solid $main-color;
+                width: 58px;
+                top: 50px;
+                left: 178px;
+                transition: 0.7s;
+              }
+            }
+          }
+          .street {
+            cursor: pointer;
+            a {
+              color: rgba(0, 0, 0, 0.5);
+            }
+            &:hover {
+              &::after {
+                content: "";
+                position: absolute;
+                border: 1px solid $main-color;
+                width: 70px;
+                top: 50px;
+                left: 352px;
+                transition: 0.7s;
+              }
+            }
+          }
+          .inside {
+            cursor: pointer;
+            a {
+              color: rgba(0, 0, 0, 0.5);
+            }
+  
+            &:hover {
+              &::after {
+                content: "";
+                position: absolute;
+                border: 1px solid $main-color;
+                width: 50px;
+                top: 50px;
+                right: -10px;
+                transition: 0.7s;
+              }
+            }
+          }
+        }
+        .men_list {
+          position: relative;
+  
+          &:hover {
+            .dropdown {
+              display: block;
+              transition: 0.7s;
+            }
+          }
+  
+          .dropdown {
+            position: absolute;
+            display: none;
+            background-color: whitesmoke;
+            color: $dark-color;
+            width: 193px;
+            height: 343px;
+            left: -2px;
+            list-style: none;
+            z-index: 1;
+  
+            li {
+              text-align: start;
+              padding: 10px;
+  
+              a {
+                color: $dark-color;
+                transition: 0.4s;
+                &:hover {
+                  color: $green-color;
+                  transition: 0.4s;
+                }
+              }
+            }
+          }
+        }
+      }
+  
+      .icons {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 25px;
+  
+        @include mobile {
+          gap: 11px;
+        }
+        @include tablet {
+          gap: 22px;
+        }
+        .change-color {
+          @include tablet {
+            width: 28px;
+          }
+        }
+  
+        i {
+          cursor: pointer;
+          transition: 0.5s;
+          color: $dark-color;
+  
+          @include tablet {
+            font-size: 20px;
+          }
+        }
+  
+        .user {
+          font-family: "Font Awesome 1 Free";
+          font-size: 0px;
+          .login {
+            position: relative;
+            .fa-circle-xmark {
+              position: absolute;
+              top: -21px;
+              right: 1px;
+              font-size: 26px;
+            }
+          }
+  
+          .login-row {
+            width: 500px;
+            height: 612px;
+            position: absolute;
+            display: flex;
+            flex-direction: column;
+            border: 1px solid #f8f9fa;
+            border-radius: 10px;
+            padding: 30px 10px;
+            margin: 0 auto 62px;
+            background-color: #f8f9fa;
+            z-index: 2;
+            left: 524px;
+            top: 56px;
+            .invalid-feedback {
+              font-size: 15px;
+              font-weight: 400;
+  
+              @include mobile {
+                font-size: 14px;
+                font-weight: 400;
+                margin-left: -21px;
+              }
+  
+              @include tablet {
+                // margin-left: -16px;
+              }
+            }
+            @include mobile {
+              width: 390px;
+              height: 612px;
+              top: 56px;
+              left: 0px;
+            }
+  
+            @include tablet {
+              left: 102px;
+              top: 78px;
+              height: 600px;
+            }
+  
+            .login {
+              display: flex;
+              justify-content: center;
+              flex-wrap: wrap;
+              color: $dark-color;
+  
+              a {
+                text-decoration: none;
+              }
+  
+              .close {
+                cursor: pointer;
+              }
+            }
+  
+            .login-register-row {
+              width: 350px;
+              height: 96px;
+              display: flex;
+              justify-content: space-evenly;
+              flex-direction: row;
+              flex-wrap: wrap;
+              text-align: center;
+              align-content: center;
+              background-color: $main-color;
+              border-radius: 10px;
+              margin-top: 4em;
+              margin-left: 70px;
+  
+              @include mobile {
+                width: 306px;
+              }
+              .login-switch {
+                width: 49%;
+                height: 91%;
+                border-radius: 10px;
+                text-align: center;
+  
+                .login-button {
+                  width: 100%;
+                  height: 50px;
+                  display: flex;
+                  justify-content: center;
+                  flex-direction: row;
+                  align-items: center;
+                  font-size: 19px;
+                  font-weight: 500;
+                  border: 1px solid $main-color;
+                  margin-top: 25px;
+                  @include mobile {
+                    width: 100%;
+                    position: relative;
+                    left: -39px;
+                  }
+                }
+              }
+  
+              .register-switch {
+                width: 49%;
+                height: 91%;
+                border-radius: 10px;
+  
+                text-align: center;
+  
+                .register-button {
+                  width: 100%;
+                  height: 50px;
+                  display: flex;
+                  justify-content: center;
+                  flex-direction: row;
+                  align-items: center;
+                  font-size: 19px;
+                  font-weight: 500;
+                  border: 1px solid $main-color;
+                  margin-top: 25px;
+  
+                  @include mobile {
+                    width: 100%;
+                    position: relative;
+                    left: -41px;
+                  }
+                }
+              }
+            }
+            .login-form {
+              margin-top: 50px;
+              margin-left: -17px;
+              @include mobile {
+                margin-top: 50px;
+                margin-left: -17px;
+              }
+              .inputs {
+                margin: 20px 0 10px;
+                width: 69%;
+                margin-left: 96px;
+  
+                input {
+                  width: 100%;
+                  border-radius: 5px;
+                  border: none;
+                  background-color: $main-color;
+                  width: 100%;
+                  height: 50px;
+                  padding: 10px 20px;
+                  outline: none;
+                  border: 1px solid $dark-color;
+                  font-size: 18px;
+  
+                  @include mobile {
+                    margin-left: -23px;
+                    width: 95%;
+                  }
+                }
+  
+                button {
+                  width: 100%;
+  
+                  padding: 10px 20px;
+                  border-radius: 5px;
+                  color: #fff;
+                  height: 50px;
+                  background-color: $dark-color;
+                  border: 1px solid $dark-color;
+                  transition: 0.7s;
+                  font-size: 17px;
+  
+                  @include mobile {
+                    margin-left: -23px;
+                    width: 95%;
+                  }
+                  &:hover {
+                    background-color: #fff;
+                    transition: 0.7s;
+                    color: $dark-color;
+                  }
+                }
+  
+                a {
+                  text-decoration: none;
+                  color: $dark-color;
+                  transition: 0.7s;
+                  &:hover {
+                    color: $main-color;
+                    transition: 0.7s;
+                  }
+                }
+              }
+            }
+            .register-form {
+              .inputs {
+                margin: 10px 0 10px;
+                width: 73%;
+                margin-left: 72px;
+  
+                input {
+                  width: 100%;
+                  border-radius: 5px;
+                  border: none;
+                  background-color: $main-color;
+                  width: 100%;
+                  height: 50px;
+                  padding: 10px 20px;
+                  outline: none;
+                  border: 1px solid $dark-color;
+                  font-size: 18px;
+                  @include mobile {
+                    margin-left: -25px;
+                    width: 95%;
+                  }
+                }
+  
+                button {
+                  width: 100%;
+  
+                  padding: 10px 20px;
+                  border-radius: 5px;
+                  color: white;
+                  background-color: $dark-color;
+                  border: 1px solid $dark-color;
+  
+                  &:hover {
+                    background-color: #fff;
+                    transition: 0.7s;
+                    color: $dark-color;
+                  }
+                }
+              }
+  
+              .switch_inputs {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                .inputss {
+                  margin: 22px 0px 10px;
+                  width: 35% !important;
+                  margin-left: 10px;
+  
+                  @include mobile {
+                    text-align: center;
+                  }
+  
+                  input {
+                    width: 100%;
+                    border-radius: 5px;
+                    border: none;
+                    background-color: $main-color;
+                    height: 50px;
+                    padding: 10px 20px;
+                    outline: none;
+                    border: 1px solid $dark-color;
+                    font-size: 18px;
+  
+                    @include mobile {
+                      margin-left: -9px;
+                    }
+                  }
+                }
+              }
+  
+              .inputs {
+                .register {
+                  width: 100%;
+  
+                  padding: 15px 20px;
+                  border-radius: 5px;
+                  color: #fff;
+                  background-color: $dark-color;
+                  border: 1px solid $dark-color;
+                  font-size: 17px;
+                  @include mobile {
+                    margin-left: -24px;
+                    width: 95%;
+                  }
+                  &:hover {
+                    background-color: #fff;
+                    transition: 0.7s;
+                    color: $dark-color;
+                  }
+                }
+              }
+            }
+          }
+          .overlay {
+            position: fixed;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            backdrop-filter: blur(3px);
+            z-index: 1;
+          }
+  
+          .active {
+            background: white;
+          }
+  
+          .visible {
+            display: none;
+          }
+          .block {
+            display: block;
+          }
+  
+          .news {
+            outline: none;
+          }
+        }
+      }
+    }
+  
+
+  }

@@ -223,10 +223,10 @@ header {
             &::after {
               content: "";
               position: absolute;
-              border: 1px solid $dark-color;
-              width: 38px;
+              border: 1px solid $main-color;
+              width: 42px;
               top: 50px;
-              left: 29px;
+              left: 25px;
               transition: 0.7s;
             }
           }
@@ -241,10 +241,10 @@ header {
             &::after {
               content: "";
               position: absolute;
-              border: 1px solid #000000;
+              border: 1px solid $main-color;
               width: 58px;
               top: 50px;
-              left: 180px;
+              left: 178px;
               transition: 0.7s;
             }
           }
@@ -258,10 +258,10 @@ header {
             &::after {
               content: "";
               position: absolute;
-              border: 1px solid $dark-color;
+              border: 1px solid $main-color;
               width: 70px;
               top: 50px;
-              left: 358px;
+              left: 352px;
               transition: 0.7s;
             }
           }
@@ -276,7 +276,7 @@ header {
             &::after {
               content: "";
               position: absolute;
-              border: 1px solid $dark-color;
+              border: 1px solid $main-color;
               width: 50px;
               top: 50px;
               right: -10px;
@@ -684,7 +684,7 @@ header {
     .img-slide {
       width: 100%;
       height: 95vh;
-      transition: all 2s;
+      transition: all 5s;
       @include mobile {
         height: 79vh;
       }
@@ -696,7 +696,7 @@ header {
         height: 90vh;
         object-fit: cover;
         background-repeat: no-repeat;
-        filter: brightness(0.9);
+        filter: brightness(0.8);
       }
     }
 
@@ -995,6 +995,8 @@ main {
           border-radius: 1px;
           filter: brightness(0.9);
 
+      
+
           @include mobile {
             height: 24vh;
             border-radius: 2px;
@@ -1102,6 +1104,11 @@ main {
             border-radius: 2px !important;
             height: 24vh !important;
           }
+
+          
+          &:hover {
+            filter: brightness(1.1);
+          }
         }
         .wear {
           position: absolute;
@@ -1154,6 +1161,7 @@ main {
           transition: 0.7s;
           background-color: $main-color;
           color: $dark-color;
+          cursor: pointer;
         }
       }
     }
@@ -1164,7 +1172,7 @@ main {
       right: 267px;
 
       color: $main-color;
-      font-size: 42px;
+      font-size: 40px;
       @include mobile {
         top: 276px;
         font-size: 28px;
@@ -1191,24 +1199,28 @@ main {
         border: 1px solid rgba(255, 255, 255, 0.3);
         border-radius: 35px;
         font-size: 14px;
+
+        transition: 0.7s!important;
+        &:hover {
+          transition: 0.7s;
+          background-color: $main-color;
+          color: $dark-color;
+          cursor: pointer;
+        }
         @include mobile {
           left: 32%;
           font-size: 9px;
           width: 150px;
           height: 32px;
           top: 312px;
-}
+        }
         }
 
         @include tablet {
           top: 128px;
           right: 92px;
         }
-        &:hover {
-          transition: 0.7s;
-          background-color: $main-color;
-          color: $dark-color;
-        }
+      
       }
     }
 
@@ -1263,6 +1275,7 @@ main {
           transition: 0.7s;
           background-color: $main-color;
           color: $dark-color;
+          cursor: pointer;
         }
       }
     }
@@ -1319,6 +1332,7 @@ main {
           transition: 0.7s;
           background-color: $main-color;
           color: $dark-color;
+          cursor: pointer;
         }
       }
     }
@@ -1429,6 +1443,7 @@ footer {
                 margin-bottom: 14px;
                 color: $main-color;
 
+
                 @include mobile{
                   width: 100%;
 
@@ -1440,6 +1455,8 @@ footer {
                 &::placeholder {
                   color: $main-color;
                   font-size: 13px;
+             
+
                 }
               }
 
@@ -1464,8 +1481,9 @@ footer {
                   }
                   &:hover {
                     transition: 0.7s;
-                    background-color: $main-color;
-                    color: $dark-color;
+                    background-color: $dark-color;
+                    color: $main-color;
+                    border: 1px solid $dark-color;
                   }
                 }
               }
@@ -1489,6 +1507,12 @@ footer {
               height: 33.58px;
               margin-bottom: 20px;
               margin-right: 16px;
+              transition: 0.8s;
+              &:hover{
+                background-color: $green-color;
+                transition: 0.8s;
+                cursor: pointer;
+              }
             }
           }
           .footer_end {
@@ -1537,6 +1561,11 @@ footer {
               color: $main-color;
               font-weight: 900;
               font-size: 15px;
+              transition: 0.5s !important;
+              &:hover{
+                color: $main-color;
+                transition: 0.5s !important;
+              }
             }
             li {
               padding: 12px 0px;
@@ -1548,11 +1577,22 @@ footer {
             a {
               text-decoration: none;
               color: gray;
+              transition: 0.7s;
+              &:hover{
+                color: $green-color;
+                transition: 0.5s;
+              }
             }
             list-style: none;
           }
           .about {
             padding: 0px 53px;
+
+      
+
+            &:hover{
+              color: $main-color;
+            }
             @include mobile {
               padding: 0px 53px !important;
             }
@@ -1563,6 +1603,11 @@ footer {
               color: $main-color;
               font-weight: 900;
               font-size: 15px;
+              transition: 0.5s !important;
+              &:hover{
+                color: $main-color !important;
+                transition: 0.5s !important;
+              }
             }
      
 
@@ -1581,11 +1626,15 @@ footer {
             a {
               text-decoration: none;
               color: gray;
+              transition: 0.5s;
+              &:hover{
+                color: $green-color;
+                transition: 0.5s;
+              }
             }
           }
 
           .contact {
-
             @include mobile {
               padding: 3px 1px;
             }
@@ -1593,6 +1642,11 @@ footer {
               color: $main-color;
               font-weight: 900;
               font-size: 15px;
+              transition: 0.5s !important;
+              &:hover{
+                color: $main-color;
+                transition: 0.5s !important;
+              }
             }
 
             list-style: none;
@@ -1606,6 +1660,12 @@ footer {
             a {
               text-decoration: none;
               color: gray;
+              transition: 0.5s;
+              &:hover{
+                color: $green-color;
+                transition: 0.5s;
+              }
+              
             }
           }
         }
@@ -1617,6 +1677,7 @@ footer {
 .darks {
   background-color: $bgdarkcolor;
   color: $main-color !important;
+  
   .dropdown {
     a {
       color: $dark-color !important;
@@ -1639,8 +1700,10 @@ footer {
   .explore-button_second {
     background-color: $dark-color !important;
     color: $main-color !important;
+    transition: 0.7s !important;
     &:hover {
       background: top !important;
+      transition: 0.7s !important;
     }
   }
   .icons {
@@ -1674,39 +1737,138 @@ footer {
   .slide_all {
     img {
       filter: brightness(0.7) !important;
+
+      
     }
   }
 
   .race {
     img {
       filter: brightness(0.7) !important;
+
+      
+      &:hover {
+        filter: brightness(1.1) !important;
+      }
+
+
     }
     .view_button {
       background-color: $dark-color !important;
       color: $main-color !important;
+      transition: 0.7s!important;
       &:hover {
         background: top !important;
+        transition: 0.7s !important;
+        
       }
     }
     .vieww_button {
       background-color: $dark-color !important;
       color: $main-color !important;
+      transition: 0.7s!important;
       &:hover {
         background: top !important;
+        transition: 0.7s!important;
       }
     }
     .buy_button {
       background-color: $dark-color !important;
       color: $main-color !important;
+      transition: 0.7s!important;
       &:hover {
         background: top !important;
+        transition: 0.7s!important;
       }
     }
     .buyy_button {
       background-color: $dark-color !important;
       color: $main-color !important;
+      transition: 0.7s!important;
       &:hover {
         background: top !important;
+        transition: 0.7s!important;
+      }
+    }
+  }
+
+  #contact--us{
+    .support{
+      .support_head{
+        transition: 0.5s !important;
+        &:hover{
+          color: $main-color !important;
+          transition: 0.5s !important;
+        }
+      }
+
+      a{
+        transition: 0.5s !important;
+        &:hover{
+          color: $green-color !important;
+          transition: 0.5s !important;
+        }
+      }
+    }
+
+    .about{
+      .about_head{
+        transition: 0.5s !important;
+        &:hover{
+          color: $main-color !important;
+          transition: 0.5s !important;
+        }
+      }
+
+      a{
+        transition: 0.5s !important;
+        &:hover{
+          color: $green-color !important;
+          transition: 0.5s !important;
+        }
+      }
+    }
+
+    .contact{
+      .contact_head{
+        transition: 0.5s !important;
+        &:hover{
+          color: $main-color !important;
+          transition: 0.5s !important;
+        }
+      }
+
+      a{
+        transition: 0.5s !important;
+        &:hover{
+          color: $green-color !important;
+          transition: 0.5s !important;
+        }
+      }
+    }
+    .explore_button {
+      width: 244px;
+      height: 45px;
+      color: $main-color !important;
+      transition: 0.7s !important;
+      background-color: $dark-color !important;
+      border: 1px solid $dark-color !important;
+      border-radius: 35px;
+      font-size: 13px;
+      margin-bottom: 50px;
+
+      @include mobile{
+        width: 100%;
+
+      }
+      @include tablet {
+        width: 205px;
+      }
+      &:hover {
+        transition: 0.7s !important;
+        background-color: $main-color !important;
+        color: $dark-color !important;
+        border: 1px solid $main-color !important;
       }
     }
   }
