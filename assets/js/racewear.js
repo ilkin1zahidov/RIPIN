@@ -192,14 +192,3 @@ closeBar.addEventListener('click', ()=> {
     }
 })
 
-
-
-// product slide
-
-$(document).ready(function () {
-
-    $(".hover_img img").mouseover(function () {
-        document.getElementById("images").src = this.src;
-    })
-})
-

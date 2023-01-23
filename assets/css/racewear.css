@@ -1266,147 +1266,120 @@ body h3 {
   margin-bottom: 0rem !important;
 }
 
-main #product_detail {
+main #main--video {
   width: 100%;
   height: auto;
 }
-main #product_detail .my-container {
+main #main--video .video_player {
   width: 100%;
   height: auto;
-  padding: 80px 30px;
-  margin-top: 50px;
+  position: relative;
 }
-main #product_detail .my-container .page-new {
-  margin-bottom: 20px;
+main #main--video .video_player video {
+  width: 100%;
+  height: auto;
+  filter: brightness(0.5);
+}
+main #main--video .video_player .video_text {
+  position: absolute;
+  top: 168px;
+  left: 536px;
+  color: #f8f9fa;
+  font-size: 50px;
+}
+main #main--video .video_player .page-new {
+  padding: 70px 80px;
+  margin-left: 70px;
   font-size: 13px;
 }
-main #product_detail .my-container .page-new .new {
+main #main--video .video_player .page-new .new {
   color: #000000;
   font-weight: 900;
   font-size: 13px;
 }
-main #product_detail .my-container .product_list {
+main #product--lists {
   width: 100%;
   height: auto;
-  display: flex;
-  gap: 30px;
 }
-main #product_detail .my-container .product_list .product_image {
-  display: flex;
+main #product--lists .container {
   width: 100%;
-  margin: auto;
-  -moz-column-gap: 23px;
-       column-gap: 23px;
+  height: auto;
+  padding: 30px 60px;
 }
-main #product_detail .my-container .product_list .product_image .hover_img {
+main #product--lists .all_products {
   display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  gap: 21px;
+  gap: 50px;
 }
-main #product_detail .my-container .product_list .product_image .hover_img img {
-  -o-object-fit: cover;
-     object-fit: cover;
-  border-radius: 4px;
-  height: 114px;
-  cursor: pointer;
+main #product--lists .all_products .products {
+  display: flex;
 }
-main #product_detail .my-container .product_list .product_image .hover_choose img {
-  height: auto;
-  width: 100%;
-  border-radius: 4px;
-  cursor: pointer;
-}
-main #product_detail .my-container .product_list .product_shop {
-  width: 50%;
-  height: auto;
-}
-main #product_detail .my-container .product_list .product_shop .product_name {
-  margin-bottom: 18px;
-}
-main #product_detail .my-container .product_list .product_shop .product_name .basic {
-  color: darkgray;
-  margin-bottom: 20px;
-}
-main #product_detail .my-container .product_list .product_shop .product_name .beanie {
-  color: #000000;
-  font-weight: 900;
-  font-size: 30px;
-  margin-top: 10px;
-}
-main #product_detail .my-container .product_list .product_shop .review {
-  margin-bottom: 15px;
-}
-main #product_detail .my-container .product_list .product_shop .review .price {
+main #product--lists .all_products .products .product_info .product_head {
+  font-size: 12px;
   color: #ce3232;
-  font-size: 22px;
   font-weight: 700;
 }
-main #product_detail .my-container .product_list .product_shop .stock_product {
-  margin-bottom: 3px;
+main #product--lists .all_products .products .product_info .origin_gloves {
+  font-size: 40px;
+  font-weight: 900;
+  color: #000000;
 }
-main #product_detail .my-container .product_list .product_shop .stock_product .stock {
-  font-weight: bold;
-}
-main #product_detail .my-container .product_list .product_shop .product_code {
-  margin-bottom: 3px;
-}
-main #product_detail .my-container .product_list .product_shop .product_code .code_pd {
-  font-weight: bold;
-}
-main #product_detail .my-container .product_list .product_shop .product_tags {
-  margin-bottom: 20px;
-}
-main #product_detail .my-container .product_list .product_shop .product_tags .tags {
-  font-weight: bold;
-}
-main #product_detail .my-container .product_list .product_shop .product_info .details {
+main #product--lists .all_products .products .product_info .price {
+  font-size: 20px;
   font-weight: 700;
-  font-size: 17px;
+  color: #000000;
 }
-main #product_detail .my-container .product_list .product_shop .product_info .info {
-  font-weight: 400;
-  margin-top: 2px;
+main #product--lists .all_products .products .product_info .product_special {
+  padding: 10px 17px;
+  font-size: 13px;
+  font-weight: 700;
 }
-main #product_detail .my-container .product_list .product_shop .shipping .made {
-  padding: 18px 16px;
+main #product--lists .all_products .products .product_info .product_special li {
+  margin: 3px 0px;
 }
-main #product_detail .my-container .product_list .product_shop .shipping .made li {
-  font-size: 15px;
-}
-main #product_detail .my-container .product_list .drop_product {
-  display: flex;
-  flex-direction: row;
-}
-main #product_detail .my-container .product_list .drop_product button {
-  width: 200px;
-  border-top: none;
-  border-left: none;
-  border-right: none;
+main #product--lists .all_products .products .product_info form input {
+  width: 38.6%;
+  height: 45px;
+  padding: 0px 0px 0px 15px;
+  background-color: #070707;
   outline: none;
-  background-color: white;
+  border: none;
+  margin-bottom: 14px;
+  color: #f8f9fa;
 }
-main #product_detail .my-container .product_list .drop_product .dropdown-toggle {
-  color: black;
+main #product--lists .all_products .products .product_info form input::-moz-placeholder {
+  color: #f8f9fa;
+  font-size: 13px;
 }
-main #product_detail .my-container .product_list .drop_product .dropdown {
-  padding: 5px;
+main #product--lists .all_products .products .product_info form input:-ms-input-placeholder {
+  color: #f8f9fa;
+  font-size: 13px;
 }
-main #product_detail .my-container .product_list .whislist {
-  margin-top: 15px;
+main #product--lists .all_products .products .product_info form input::placeholder {
+  color: #f8f9fa;
+  font-size: 13px;
 }
-main #product_detail .my-container .product_list .whislist a {
-  color: rgba(0, 0, 0, 0.87);
-  font-size: 15px;
+main #product--lists .all_products .products .product_info form .video_button .explore_button {
+  width: 244px;
+  height: 45px;
+  color: #000000;
+  transition: 0.7s;
+  background-color: #f8f9fa;
+  border: 1px solid #f8f9fa;
+  border-radius: 35px;
+  font-size: 13px;
+  margin-bottom: 50px;
 }
-main #product_detail .my-container .product_list .product_button {
-  margin-top: 46px;
+main #product--lists .all_products .products .product_info form .video_button .explore_button:hover {
+  transition: 0.7s;
+  background-color: #000000;
+  color: #f8f9fa;
+  border: 1px solid #000000;
 }
-main #product_detail .my-container .product_list .product_button button {
-  color: white;
-  width: 147px;
-  height: 52px;
-  border-radius: 4px;
-  background-color: #ce3232;
-  box-shadow: 0 8px 8px -4px grey;
-}/*# sourceMappingURL=new.css.map */
+main #product--lists .all_products .products .product_image {
+  width: 60%;
+  height: auto;
+}
+main #product--lists .all_products .products .product_image img {
+  width: 100%;
+  height: auto;
+}/*# sourceMappingURL=racewear.css.map */

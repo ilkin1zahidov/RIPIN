@@ -1,6 +1,6 @@
 @import "../abstract/mixin";
 @import "../abstract/variable";
-@import "../layout/layout.scss";
+@import "../layout/layout";
 
 * {
   margin: 0;
@@ -9,615 +9,190 @@
 }
 
 body {
+  width: 100%;
   height: 100vh;
   font-family: "Inter", sans-serif;
   position: relative;
-  background-color: chocolate;
-  p{
+  background-color: $page-color;
+
+  p {
     margin-bottom: 0rem !important;
   }
 
-  h3{
+  h3 {
     margin-bottom: 0rem !important;
   }
 }
 
-header {
-  .darks {
-    background-color: $bgdarkcolor;
-    color: $main-color !important;
 
-    .dropdown {
-      a {
-        color: $dark-color !important;
-      }
-    }
-    .nav_head {
-      background-color: rgba(0, 0, 0, 0.9) !important;
-    }
-    .product_img {
-      filter: brightness(0.5) !important;
-    }
-    .explore_button {
-      background-color: $dark-color !important;
-      color: $main-color !important;
-      &:hover {
-        background: top !important;
-      }
-    }
-
-    .explore-button_second {
-      background-color: $dark-color !important;
-      color: $main-color !important;
-      transition: 0.7s !important;
-      &:hover {
-        background: top !important;
-        transition: 0.7s !important;
-      }
-    }
-    .icons {
-      i {
-        color: $main-color !important;
-      }
-
-      .userss {
-        background-color: $main-color !important;
-        border-radius: 50% !important;
-      }
-    }
-    a {
-      color: $main-color !important;
-    }
-
-    .card_one {
-      img {
-        filter: brightness(0.9) !important;
-        &:hover {
-          filter: brightness(1.1) !important;
-        }
-      }
-    }
-    .login {
-      .close {
-        color: $dark-color !important;
-      }
-    }
-
-    .slide_all {
-      img {
-        filter: brightness(0.7) !important;
-      }
-    }
-
-    .race {
-      img {
-        filter: brightness(0.7) !important;
-
-        &:hover {
-          filter: brightness(1.1) !important;
-        }
-      }
-      .view_button {
-        background-color: $dark-color !important;
-        color: $main-color !important;
-        transition: 0.7s !important;
-        &:hover {
-          background: top !important;
-          transition: 0.7s !important;
-        }
-      }
-      .vieww_button {
-        background-color: $dark-color !important;
-        color: $main-color !important;
-        transition: 0.7s !important;
-        &:hover {
-          background: top !important;
-          transition: 0.7s !important;
-        }
-      }
-      .buy_button {
-        background-color: $dark-color !important;
-        color: $main-color !important;
-        transition: 0.7s !important;
-        &:hover {
-          background: top !important;
-          transition: 0.7s !important;
-        }
-      }
-      .buyy_button {
-        background-color: $dark-color !important;
-        color: $main-color !important;
-        transition: 0.7s !important;
-        &:hover {
-          background: top !important;
-          transition: 0.7s !important;
-        }
-      }
-    }
-
-    #contact--us {
-      .support {
-        .support_head {
-          transition: 0.5s !important;
-          &:hover {
-            color: $main-color !important;
-            transition: 0.5s !important;
-          }
-        }
-
-        a {
-          transition: 0.5s !important;
-          &:hover {
-            color: $green-color !important;
-            transition: 0.5s !important;
-          }
-        }
-      }
-
-      .about {
-        .about_head {
-          transition: 0.5s !important;
-          &:hover {
-            color: $main-color !important;
-            transition: 0.5s !important;
-          }
-        }
-
-        a {
-          transition: 0.5s !important;
-          &:hover {
-            color: $green-color !important;
-            transition: 0.5s !important;
-          }
-        }
-      }
-
-      .contact {
-        .contact_head {
-          transition: 0.5s !important;
-          &:hover {
-            color: $main-color !important;
-            transition: 0.5s !important;
-          }
-        }
-
-        a {
-          transition: 0.5s !important;
-          &:hover {
-            color: $green-color !important;
-            transition: 0.5s !important;
-          }
-        }
-      }
-      .explore_button {
-        width: 244px;
-        height: 45px;
-        color: $main-color !important;
-        transition: 0.7s !important;
-        background-color: $dark-color !important;
-        border: 1px solid $dark-color !important;
-        border-radius: 35px;
-        font-size: 13px;
-        margin-bottom: 50px;
-
-        @include mobile {
-          width: 100%;
-        }
-        @include tablet {
-          width: 205px;
-        }
-        &:hover {
-          transition: 0.7s !important;
-          background-color: $main-color !important;
-          color: $dark-color !important;
-          border: 1px solid $main-color !important;
-        }
-      }
-    }
-  }
-
-  .active {
-    visibility: visible !important;
-    opacity: 1 !important;
-  }
-}
 
 main {
   #product_detail {
     width: 100%;
     height: auto;
-    .container{
+    .my-container {
       width: 100%;
       height: auto;
-     padding: 80px 40px;
+      padding: 80px 30px;
       margin-top: 50px;
-      .product_text{
-        .homepage{
-          font-size: 13px;
-          color: $common-color;
-  
-        }
-        .newpage{
-          font-size: 14px;
-          font-weight: 700;
-          color: $dark-color;
-          
-        }
+
+      .page-new {
         margin-bottom: 20px;
-      }
-     .product_image {
-      display: flex;
-      width: 100%;
-      column-gap: 23px;
-      
-
-      .hover_img {
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-        gap: 21px;
-
-        img {
-          object-fit: cover;
-          border-radius: 4px;
-          height: 114px;
-          cursor: pointer;
+        font-size: 13px;
+        .new {
+          color: $dark-color;
+          font-weight: 900;
+          font-size: 13px;
         }
       }
-
-      .hover_choose {
-        img {
-          width: 100%; 
-          height: auto;
-          border-radius: 4px;
-          cursor: pointer;
-        }
-      }
-
-      .product_details{
-        width: 50%;
+      .product_list {
+        width: 100%;
         height: auto;
-        padding: 0px 40px;
-        background-color: brown;
-        .detail_head{
-            .basic{
-              color: $common-color;
-          
-            }
-            .re_wool{
-              color: $dark-color;
-              font-weight: 700;
-              margin-top: 5px;
-            }   
-            margin-bottom: 16px;         
-        }
+        display: flex;
 
-        .shipping_price{
-          margin-bottom: 35px;
-          position: relative ;
-          .price{
-            color:$dark-color;
-  
-          }
-          .price_text{
-            color: $dark-color;
-            font-size: 11px;
-        
-            &::after{
-              content: "";
-              position: absolute;
-              width: 446px;
-              height: auto;
-              border: 1px solid $common-color;
-              top: 69px;
-              right: -43px;
-            }
-          }
-        }
+        gap: 30px;
+        .product_image {
+          display: flex;
+          width: 100%;
+          margin: auto;
+          column-gap: 23px;
 
-        .choose_size{
-          margin-bottom: 40px;
-          position: relative;
-          .size{
-            color: $dark-color;
-          }
-          .one_size{
-            width: 74px;
-            height: 47px;
-            background-color: $dark-color;
-            border:1px solid $dark-color;
-            color: $main-color;
-            border-radius: 3px;
-            
-            &::after{
-              content: "";
-              position: absolute;
-              width: 446px;
-              height: auto;
-              border: 1px solid $common-color;
-              top: 99px;
-              right: -43px;
-            }
-          }
-        }
-
-        .choose_color{
-            margin-bottom: 45px;
-            position:relative ;
-          .color{
-            color: $dark-color;
-          }
-          .color_one{
-            width: 39.8px;
-            height: 39.8px;
-            border: 1px solid $dark-color;
-            border-radius: 50%;
-            background-color: $dark-color;
-            
-          }
-          .color_two{
-            width: 37.8px;
-            height: 37.8px;
-            border: 1px solid $product-color;
-            border-radius: 50%;
-            background-color: $product-color;
-            margin-left: 15px;
-          }
-
-          &::after{
-            content: "";
-            position: absolute;
-            width: 446px;
-            height: auto;
-            border: 1px solid $common-color;
-            top: 99px;
-            right: -43px;
-          }
-        }
-
-        .shopping_cart{
-          position: relative ;
-          margin-bottom: 40px;
-          .card_button{
-              width: 219px;
-              height: 48px;
-              border: 1px solid $red-color;
-              background-color: $red-color;
-              border-radius: 30px;
-              margin-bottom: 20px;
-          }
-
-          .delivery{
-            color: $main-color;
+          .hover_img {
             display: flex;
-            gap: 20px;
-            img{
-              width: 34px;
-              height: 27px;
-            }
-            .delivery_text{
-              font-size: 12px;
-           
+            flex-direction: column;
+            justify-content: flex-start;
+            gap: 21px;
 
-            }
-          }
-
-          &::after{
-            content: "";
-            position: absolute;
-            width: 446px;
-            height: auto;
-            border: 1px solid $common-color;
-            top: 562px;
-            right: -4px;
-            top: 142px;
-            right: -43px;
-          }
-        }
-
-        .advantages{
-          position: relative ;
-          margin-bottom: 50px;
-          .advan_text{
-            color: $dark-color;
-          }
-
-          .advan_one{
-            margin-bottom: 40px;
-            position: relative ;
-            img{
-              width: 48px;
-              height: 48px;
-              margin-bottom: -38px;
-            } 
-            
-            .recycled{
-              color: $dark-color;
-              margin-left: 15px;
-              font-size: 15px;
-              &::after{
-                content: "50% recycle PET bottles, 50% fine merion wool (chlorine free and from no mulesing sheep).";
-                position: absolute;
-                bottom: -37px;
-                left: 68px;
-                color: $main-color;
-                font-size: 11px;
-              }
-            }
-          }
-          .advan_two{
-            margin-bottom: 40px;
-            position: relative  !important;
-            img{
-              width: 48px;
-              height: 48px;
-              margin-bottom: -38px;
-            } 
-            
-            .layer{
-              color: $dark-color;
-              margin-left: 15px;
-              font-size: 15px;
-              &::after{
-                content: "Inner fabric layer provides additional warmth for the cold days.";
-                position: absolute;
-                bottom: -29px;
-                left: 69px;
-                color: $main-color;
-                font-size: 11px;
-              }
+            img {
+              object-fit: cover;
+              border-radius: 4px;
+              height: 114px;
+              cursor: pointer;
             }
           }
 
-          .advan_three{
-            position: relative !important;
-            img{
-              width: 48px;
-              height: 48px;
-              margin-bottom: -38px;
-            } 
-            
-            .germany{
-              color: $dark-color;
-              margin-left: 15px;
-              font-size: 15px;
-              &::after{
-                content: "The beanie was 100% made in Germany.";
-                position: absolute;
-                bottom: -29px;
-                left: 69px;
-                color: $main-color;
-                font-size: 11px;
-              }
-            }
-          }
-          &::after{
-            content: "";
-            position: absolute;
-            width: 446px;
-            height: auto;
-            border: 1px solid $common-color;
-            bottom: -58px;
-            right: -43px;
-          }
-
-          margin-bottom: 70px;
-        }
-
-        .range_application{
-          position: relative ;
-          margin-bottom: 35px;
-          .range{
-            color: $dark-color;
-            font-size: 16px;
-            font-weight: 700;
-          }
-          .homepage{
-            color: $common-color;
-            font-size: 13px;
-          }
-          .newpage{
-            color: $common-color;
-            font-size: 13px;
-          }
-
-          &::after{
-            content: "";
-            position: absolute;
-            width: 446px;
-            height: auto;
-            border: 1px solid $common-color;
-            bottom: -22px;
-            right: -43px;
-          }
-        }
-
-        .details{
-          position: relative ;
-          margin-bottom: 35px;
-          .details_head{
-            color: $dark-color;
-            font-weight: 700;
-            font-size: 18px;
-          }
-
-          .details_text{
-            color: $dark-color;
-            font-size: 12px;
-            
-          }
-
-          &::after{
-            content: "";
-            position: absolute;
-            width: 446px;
-            height: auto;
-            border: 1px solid $common-color;
-            bottom: -17px;
-            right: -43px;
-        }
-          }
-
-          .features{
-            position: relative ;
-            margin-bottom: 40px;
-            .features_text{
-                font-weight: 700;
-        
-            }
-            .features_one{
-              margin-top: 5px;
-              display: flex;
-              justify-content: space-between;
-              li{
-                font-size: 12px;
-              }
-            }
-
-            &::after{
-              content: "";
-              position: absolute;
-              width: 446px;
+          .hover_choose {
+            img {
               height: auto;
-              border: 1px solid $common-color;
-              bottom: -17px;
-              right: -43px;
+              width: 100%;
+              border-radius: 4px;
+              cursor: pointer;
+            }
           }
+        }
+
+        .product_shop {
+          width: 50%;
+          height: auto;
+          .product_name {
+            margin-bottom: 18px;
+            .basic {
+              color: darkgray;
+              margin-bottom: 20px;
+            }
+            .beanie {
+              color: $dark-color;
+              font-weight: 900;
+              font-size: 30px;
+              margin-top: 10px;
+            }
           }
 
-          .technology{
-            .technology_head{
+          .review {
+            margin-bottom: 15px;
+            .price {
+              color: $red-color;
+              font-size: 22px;
               font-weight: 700;
-              
             }
- 
-            .techonology_all{
-                display: flex;
-                justify-content: space-between;
-              gap: 37px;
-              margin-top: 5px;
-              img{
-                width: 100px;
-                height: 100px;
-                margin-top: 20px;
-                
-              }
-              .tecno_info{
-            
-                .techonology_text{
-                  font-size: 11px;
-                  text-align: justify;
-                
-                 
-                }
+          }
+
+          .stock_product {
+            margin-bottom: 3px;
+            .stock {
+              font-weight: bold;
+            }
+          }
+
+          .product_code {
+            margin-bottom: 3px;
+            .code_pd {
+              font-weight: bold;
+            }
+          }
+
+          .product_tags {
+            margin-bottom: 20px;
+            .tags {
+              font-weight: bold;
+            }
+          }
+          .product_info {
+            .details {
+              font-weight: 700;
+
+              font-size: 17px;
+            }
+            .info {
+              font-weight: 400;
+              margin-top: 2px;
+            }
+          }
+
+          .shipping {
+            .made {
+              padding: 18px 16px;
+              li {
+                font-size: 15px;
               }
             }
+          }
+        }
+
+        .drop_product {
+          display: flex;
+          flex-direction: row;
+
+          button {
+            width: 200px;
+            border-top: none;
+            border-left: none;
+            border-right: none;
+            outline: none;
+            background-color: white;
+          }
+          .dropdown-toggle {
+            color: black;
+          }
+
+          .dropdown {
+            padding: 5px;
+          }
+        }
+
+        .whislist {
+          margin-top: 15px;
+          a {
+            color: rgba(0, 0, 0, 0.87);
+            font-size: 15px;
+          }
+        }
+
+        .product_button {
+          margin-top: 46px;
+
+          button {
+            color: white;
+            width: 147px;
+            height: 52px;
+            border-radius: 4px;
+            background-color: $red-color;
+            box-shadow: 0 8px 8px -4px grey;
           }
         }
       }
     }
-
-    }
-
   }
+}
+
 
