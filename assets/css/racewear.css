@@ -1304,14 +1304,19 @@ main #product--lists {
 main #product--lists .container {
   width: 100%;
   height: auto;
-  padding: 30px 60px;
+  padding: 30px 0px;
 }
 main #product--lists .all_products {
   display: flex;
-  gap: 50px;
+  flex-wrap: wrap;
+  margin-left: 70px;
+  justify-content: space-between;
 }
 main #product--lists .all_products .products {
   display: flex;
+  width: 48%;
+  margin-bottom: 60px;
+  border-bottom: 1px solid;
 }
 main #product--lists .all_products .products .product_info .product_head {
   font-size: 12px;
@@ -1335,28 +1340,6 @@ main #product--lists .all_products .products .product_info .product_special {
 }
 main #product--lists .all_products .products .product_info .product_special li {
   margin: 3px 0px;
-}
-main #product--lists .all_products .products .product_info form input {
-  width: 38.6%;
-  height: 45px;
-  padding: 0px 0px 0px 15px;
-  background-color: #070707;
-  outline: none;
-  border: none;
-  margin-bottom: 14px;
-  color: #f8f9fa;
-}
-main #product--lists .all_products .products .product_info form input::-moz-placeholder {
-  color: #f8f9fa;
-  font-size: 13px;
-}
-main #product--lists .all_products .products .product_info form input:-ms-input-placeholder {
-  color: #f8f9fa;
-  font-size: 13px;
-}
-main #product--lists .all_products .products .product_info form input::placeholder {
-  color: #f8f9fa;
-  font-size: 13px;
 }
 main #product--lists .all_products .products .product_info form .video_button .explore_button {
   width: 244px;

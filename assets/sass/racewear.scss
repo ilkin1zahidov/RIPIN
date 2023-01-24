@@ -13,7 +13,7 @@ body {
   height: 100vh;
   font-family: "Inter", sans-serif;
   position: relative;
-    background-color: $page-color;
+  background-color: $page-color;
   p {
     margin-bottom: 0rem !important;
   }
@@ -61,95 +61,99 @@ main {
     width: 100%;
     height: auto;
     .container {
-        width: 100%;
-        height: auto;
-        padding: 30px 60px;
-   
+      width: 100%;
+      height: auto;
+      padding: 30px 0px;
     }
 
-    .all_products{
+    .all_products {
+      display: flex;
+      flex-wrap: wrap;
+      margin-left: 70px;
+      justify-content: space-between;
+      .products {
         display: flex;
-        gap: 50px;
-        .products {
-            display: flex;
-          .product_info {
-            .product_head{
-                font-size: 12px;
-                color: $red-color;
-                font-weight: 700;
+        width: 48%;
+        margin-bottom: 60px;
+        border-bottom: 1px solid;
+
+        .product_info {
+          .product_head {
+            font-size: 12px;
+            color: $red-color;
+            font-weight: 700;
+          }
+          .origin_gloves {
+            font-size: 40px;
+            font-weight: 900;
+            color: $dark-color;
+          }
+
+          .price {
+            font-size: 20px;
+            font-weight: 700;
+            color: $dark-color;
+          }
+
+          .product_special {
+            padding: 10px 17px;
+            font-size: 13px;
+            font-weight: 700;
+            li {
+              margin: 3px 0px;
             }
-            .origin_gloves{
-                font-size: 40px;
-                font-weight: 900;
-                color: $dark-color;
-            }
-    
-            .price{
-                font-size: 20px;
-                font-weight: 700;
-                color: $dark-color;
-           
-            }
-    
-            .product_special{
-                padding: 10px 17px;
-                font-size: 13px ;
-                font-weight: 700;
-                li{
-                    margin: 3px 0px;
-                }
-            }
-    
-            form {
-              input {
-                width: 38.6%;
+          }
+
+          form {
+            .video_button {
+              .explore_button {
+                width: 244px;
                 height: 45px;
-                padding: 0px 0px 0px 15px;
-                background-color: $input-color;
-                outline: none;
-                border: none;
-                margin-bottom: 14px;
-                color: $main-color;
-    
-                &::placeholder {
-                  color: $main-color;
-                  font-size: 13px;
-                }
-              }
-    
-              .video_button {
-                .explore_button {
-                  width: 244px;
-                  height: 45px;
-                  color: $dark-color;
+                color: $dark-color;
+                transition: 0.7s;
+                background-color: $main-color;
+                border: 1px solid $main-color;
+                border-radius: 35px;
+                font-size: 13px;
+                margin-bottom: 50px;
+
+                // min-width: 140px;
+                // height: 45px;
+                // display: inline-block;
+                // position: relative;
+                // overflow: hidden;
+                // padding: 0 35px;
+                // border: 1px solid #070707;
+                // border-radius: 30px;
+                // font-size: 12px;
+                // font-weight: 400;
+                // letter-spacing: 5%;
+                // text-transform: uppercase;
+                // line-height: 45px;
+                // appearance: none;
+                // cursor: pointer;
+                // text-align: center;
+                // transition: all 0.3s ease;
+
+                &:hover {
                   transition: 0.7s;
-                  background-color: $main-color;
-                  border: 1px solid $main-color;
-                  border-radius: 35px;
-                  font-size: 13px;
-                  margin-bottom: 50px;
-    
-                  &:hover {
-                    transition: 0.7s;
-                    background-color: $dark-color;
-                    color: $main-color;
-                    border: 1px solid $dark-color;
-                  }
+                  background-color: $dark-color;
+                  color: $main-color;
+                  border: 1px solid $dark-color;
                 }
               }
             }
           }
-          .product_image{
-            width: 60%;
-            height: auto;
-            img{
-                width: 100%;
-                height: auto;
-            }
-          }
-    
         }
+        .product_image {
+          width: 60%;
+          height: auto;
+          img {
+            width: 100%;
+            height: auto;
+          }
+        }
+      }
     }
-  
   }
 }
