@@ -203,7 +203,7 @@ header .container .nav_head .product_list .new {
   cursor: pointer;
 }
 header .container .nav_head .product_list .new a {
-  color: rgba(0, 0, 0, 0.5);
+  color: #f8f9fa;
   transition: 0.7s;
 }
 header .container .nav_head .product_list .new:hover::after {
@@ -219,7 +219,7 @@ header .container .nav_head .product_list .race {
   cursor: pointer;
 }
 header .container .nav_head .product_list .race a {
-  color: rgba(0, 0, 0, 0.5);
+  color: #f8f9fa;
 }
 header .container .nav_head .product_list .race:hover::after {
   content: "";
@@ -234,7 +234,7 @@ header .container .nav_head .product_list .street {
   cursor: pointer;
 }
 header .container .nav_head .product_list .street a {
-  color: rgba(0, 0, 0, 0.5);
+  color: #f8f9fa;
 }
 header .container .nav_head .product_list .street:hover::after {
   content: "";
@@ -249,7 +249,7 @@ header .container .nav_head .product_list .inside {
   cursor: pointer;
 }
 header .container .nav_head .product_list .inside a {
-  color: rgba(0, 0, 0, 0.5);
+  color: #f8f9fa;
 }
 header .container .nav_head .product_list .inside:hover::after {
   content: "";
@@ -1171,49 +1171,55 @@ footer #contact--us .container .contact-support .support_all .contact a:hover {
   background: top !important;
   transition: 0.7s !important;
 }
-.darks #contact--us .support .support_head {
+.darks .race .product--inside img {
+  filter: brightness(0.7) !important;
+}
+.darks .race .product--inside img:hover {
+  filter: brightness(1.1) !important;
+}
+.darks .race #contact--us .support .support_head {
   transition: 0.5s !important;
 }
-.darks #contact--us .support .support_head:hover {
+.darks .race #contact--us .support .support_head:hover {
   color: #f8f9fa !important;
   transition: 0.5s !important;
 }
-.darks #contact--us .support a {
+.darks .race #contact--us .support a {
   transition: 0.5s !important;
 }
-.darks #contact--us .support a:hover {
+.darks .race #contact--us .support a:hover {
   color: #0fb78d !important;
   transition: 0.5s !important;
 }
-.darks #contact--us .about .about_head {
+.darks .race #contact--us .about .about_head {
   transition: 0.5s !important;
 }
-.darks #contact--us .about .about_head:hover {
+.darks .race #contact--us .about .about_head:hover {
   color: #f8f9fa !important;
   transition: 0.5s !important;
 }
-.darks #contact--us .about a {
+.darks .race #contact--us .about a {
   transition: 0.5s !important;
 }
-.darks #contact--us .about a:hover {
+.darks .race #contact--us .about a:hover {
   color: #0fb78d !important;
   transition: 0.5s !important;
 }
-.darks #contact--us .contact .contact_head {
+.darks .race #contact--us .contact .contact_head {
   transition: 0.5s !important;
 }
-.darks #contact--us .contact .contact_head:hover {
+.darks .race #contact--us .contact .contact_head:hover {
   color: #f8f9fa !important;
   transition: 0.5s !important;
 }
-.darks #contact--us .contact a {
+.darks .race #contact--us .contact a {
   transition: 0.5s !important;
 }
-.darks #contact--us .contact a:hover {
+.darks .race #contact--us .contact a:hover {
   color: #0fb78d !important;
   transition: 0.5s !important;
 }
-.darks #contact--us .explore_button {
+.darks .race #contact--us .explore_button {
   width: 244px;
   height: 45px;
   color: #f8f9fa !important;
@@ -1225,23 +1231,41 @@ footer #contact--us .container .contact-support .support_all .contact a:hover {
   margin-bottom: 50px;
 }
 @media (max-width: 767px) {
-  .darks #contact--us .explore_button {
+  .darks .race #contact--us .explore_button {
     width: 100%;
   }
 }
 @media (min-width: 768px) and (max-width: 991px) {
-  .darks #contact--us .explore_button {
+  .darks .race #contact--us .explore_button {
     width: 205px;
   }
 }
-.darks #contact--us .explore_button:hover {
+.darks .race #contact--us .explore_button:hover {
   transition: 0.7s !important;
   background-color: #f8f9fa !important;
   color: #000000 !important;
   border: 1px solid #f8f9fa !important;
 }
-
-.active {
+.darks .race #main--video video {
+  filter: brightness(0.5) !important;
+}
+.darks .race .products .origin_gloves {
+  color: #f8f9fa !important;
+}
+.darks .race .products .price {
+  color: #f8f9fa !important;
+}
+.darks .race .products .video_button .explore_button {
+  color: #000000 !important;
+  background-color: #f8f9fa !important;
+  border: 1px solid #f8f9fa !important;
+}
+.darks .race .products .video_button .explore_button:hover {
+  background-color: #000000 !important;
+  border: 1px solid #000000 !important;
+  color: #f8f9fa !important;
+}
+.darks .active {
   visibility: visible !important;
   opacity: 1 !important;
 }
@@ -1278,7 +1302,7 @@ main #main--video .video_player {
 main #main--video .video_player video {
   width: 100%;
   height: auto;
-  filter: brightness(0.5);
+  filter: brightness(0.7);
 }
 main #main--video .video_player .video_text {
   position: absolute;
@@ -1287,9 +1311,22 @@ main #main--video .video_player .video_text {
   color: #f8f9fa;
   font-size: 50px;
 }
+@media (max-width: 767px) {
+  main #main--video .video_player .video_text {
+    top: 45px;
+    left: 78px;
+    font-size: 25px;
+  }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  main #main--video .video_player .video_text {
+    top: 83px;
+    left: 179px;
+    font-size: 45px;
+  }
+}
 main #main--video .video_player .page-new {
-  padding: 70px 80px;
-  margin-left: 70px;
+  padding: 30px 28px;
   font-size: 13px;
 }
 main #main--video .video_player .page-new .new {
@@ -1304,7 +1341,7 @@ main #product--lists {
 main #product--lists .container {
   width: 100%;
   height: auto;
-  padding: 30px 0px;
+  padding: 20px 0px;
 }
 main #product--lists .all_products {
   display: flex;
@@ -1312,11 +1349,32 @@ main #product--lists .all_products {
   margin-left: 70px;
   justify-content: space-between;
 }
+@media (max-width: 767px) {
+  main #product--lists .all_products {
+    margin-left: 0px;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  main #product--lists .all_products {
+    margin-left: 0px;
+  }
+}
 main #product--lists .all_products .products {
   display: flex;
   width: 48%;
   margin-bottom: 60px;
   border-bottom: 1px solid;
+}
+@media (max-width: 767px) {
+  main #product--lists .all_products .products {
+    width: 100%;
+    flex-direction: column-reverse;
+    margin-left: 10px;
+  }
 }
 main #product--lists .all_products .products .product_info .product_head {
   font-size: 12px;
@@ -1327,6 +1385,16 @@ main #product--lists .all_products .products .product_info .origin_gloves {
   font-size: 40px;
   font-weight: 900;
   color: #000000;
+}
+@media (max-width: 767px) {
+  main #product--lists .all_products .products .product_info .origin_gloves {
+    font-size: 32px;
+  }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  main #product--lists .all_products .products .product_info .origin_gloves {
+    font-size: 30px;
+  }
 }
 main #product--lists .all_products .products .product_info .price {
   font-size: 20px;
@@ -1342,27 +1410,39 @@ main #product--lists .all_products .products .product_info .product_special li {
   margin: 3px 0px;
 }
 main #product--lists .all_products .products .product_info form .video_button .explore_button {
-  width: 244px;
-  height: 45px;
-  color: #000000;
+  width: 193px;
+  height: 42px;
+  color: #f8f9fa;
   transition: 0.7s;
-  background-color: #f8f9fa;
-  border: 1px solid #f8f9fa;
+  background-color: #000000;
+  border: 1px solid #000000;
   border-radius: 35px;
   font-size: 13px;
   margin-bottom: 50px;
 }
+@media (max-width: 767px) {
+  main #product--lists .all_products .products .product_info form .video_button .explore_button {
+    width: 387px;
+    height: 57px;
+  }
+}
 main #product--lists .all_products .products .product_info form .video_button .explore_button:hover {
   transition: 0.7s;
-  background-color: #000000;
-  color: #f8f9fa;
-  border: 1px solid #000000;
+  background-color: #f8f9fa;
+  border: 1px solid #f8f9fa;
+  color: #000000;
 }
 main #product--lists .all_products .products .product_image {
   width: 60%;
   height: auto;
 }
+@media (max-width: 767px) {
+  main #product--lists .all_products .products .product_image {
+    width: 94%;
+  }
+}
 main #product--lists .all_products .products .product_image img {
   width: 100%;
   height: auto;
+  border-radius: 2px;
 }/*# sourceMappingURL=racewear.css.map */

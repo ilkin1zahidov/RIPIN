@@ -1,0 +1,214 @@
+@import "../abstract/mixin";
+@import "../abstract/variable";
+@import "../layout/layout";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  font-family: "Inter", sans-serif;
+  position: relative;
+  background-color: $page-color;
+  p {
+    margin-bottom: 0rem !important;
+  }
+
+  h3 {
+    margin-bottom: 0rem !important;
+  }
+}
+
+
+main{
+
+    #main--slide {
+        width: 100%;
+        height: auto;
+        .slide_head {
+          width: 100%;
+          height: auto;
+          position: relative;
+          img {
+            width: 100%;
+            height: auto;
+            filter: brightness(0.7);
+          }
+          .slide_text {
+            position: absolute;
+            top: 212px;
+            left: 481px;
+            color: $main-color;
+            font-size: 50px;
+
+            @include mobile {
+              top: 45px;
+              left: 57px;
+              font-size: 23px
+            }
+    
+            @include tablet {
+              top: 89px;
+              left: 187px;
+              font-size: 34px;
+            }
+
+          }
+    
+          .page-new {
+            padding: 30px 28px;
+            font-size: 13px;
+            .new {
+              color: $dark-color;
+              font-weight: 900;
+              font-size: 13px;
+            }
+          }
+
+          .slide_info{
+            text-align: center;
+            @include mobile {
+              margin-top: 50px;
+              
+            }
+            .slide_content{
+              text-align: justify;
+              font-size: 21px;
+              font-weight: 700;
+
+              @include mobile {
+                font-size: 19px;
+              }
+            }
+          }
+        }
+      }
+
+      #product--inside {
+        width: 100%;
+        height: auto;
+        .container {
+          width: 100%;
+          height: auto;
+          padding: 85px 18px;
+          @include mobile {
+            padding: 50px 0px;
+            margin: 0 auto;
+            margin-top: 21px;
+          }
+    
+          @include tablet {
+            padding: 25px 0px;
+            margin: 0 auto;
+          }
+    
+          .products--card {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+        
+            @include mobile {
+              display: flex;
+              flex-direction: column;
+              gap: 0px;
+              align-items: center;
+            }
+            @include tablet {
+              display: flex;
+              align-items: center;
+              
+              flex-wrap: nowrap;
+            }
+            .card_one {
+              width: 34%;
+              height: auto;
+              position: relative;
+              a {
+                text-decoration: none !important;
+                color: $dark-color;
+              }
+              @include mobile {
+                width: 100%;
+                height: 49vh;
+                padding: 0px 16px;
+              }
+    
+              @include tablet {
+                width: 100%;
+                height: auto;
+              }
+              img {
+                width: 100%;
+                height: auto;
+                object-fit: cover;
+                border-radius: 2%;
+                filter:brightness(0.7);
+                @include mobile {
+                  height: 48vh;
+                  border-radius: 2%;
+                }
+    
+                @include tablet {
+                  border-radius: 2%;
+                }
+    
+                &:hover {
+                  filter: brightness(1.1);
+                }
+              }
+              .card--body {
+                text-align: center;
+
+                .moto_life{
+                  position: absolute;
+                  top: 199px;
+                  left: 32px;
+                  color: $main-color;
+                  font-size: 40px;
+                  font-weight: 700;
+
+                  @include tablet{
+                    top: 124px;
+                    left: 14px;
+                    font-size: 22px;
+                  }
+                }
+                
+                .ripin_hoker{
+                  position: absolute;
+                  top: 223px;
+                  left: 18px;
+                  color: $main-color;
+                  font-size: 38px;
+                  font-weight: 700;
+                  @include tablet{
+                    top: 124px;
+                    left: 14px;
+                    font-size: 22px;
+                  }
+                }
+
+                .origin_campagin{
+                  position: absolute;
+                  top: 166px;
+                  left: 40px;
+                  color: $main-color;
+                  font-size: 39px;
+                  font-weight: 700;
+                  @include tablet{
+                    top: 124px;
+                    left: 14px;
+                    font-size: 22px;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    
+}

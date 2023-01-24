@@ -59,8 +59,6 @@ main {
       .page-new {
         padding: 30px 28px;
         font-size: 13px;
-
-        
         .new {
           color: $dark-color;
           font-weight: 900;
@@ -102,15 +100,19 @@ main {
         width: 48%;
         margin-bottom: 60px;
         border-bottom: 1px solid;
+
         @include mobile {
           width: 100%;
           flex-direction: column-reverse;
-          margin-left: 10px;
         }
 
 
-
         .product_info {
+
+          @include mobile {
+     
+            margin-top: 20px;
+          }
           .product_head {
             font-size: 12px;
             color: $red-color;
@@ -148,7 +150,7 @@ main {
           form {
             .video_button {
               .explore_button {
-                width: 193px;
+                width: 217px;
                 height: 42px;
                 color: $main-color;
                 transition: 0.7s;
@@ -160,13 +162,14 @@ main {
 
                 @include mobile {
                   width: 387px;
-                  height: 57px;
+                  height: 53px;
                 }
                 &:hover {
                   transition: 0.7s;
                   background-color: $main-color;
                   border: 1px solid $main-color;
                   color: $dark-color;
+               
                 }
               }
             }
@@ -175,14 +178,40 @@ main {
         .product_image {
           width: 60%;
           height: auto;
-
+          margin-top: 13px;
           @include mobile {
-            width: 94%;
+            width: 100% !important;
           }
+          .dif_image{
+            width: 95%;
+            height: 321px;
+
+            @include mobile {
+              width: 100%;
+            }
+            @include tablet {
+              height: 20vh;
+            }
+          }
+        
+
           img {
             width: 100%;
             height: auto;
+            margin-left: 40px;
             border-radius: 2px;
+              @include mobile {
+                width: 100% !important;
+                 height: auto;
+               margin-left: 1px;
+              }
+
+              @include tablet {
+                margin-left: 0px;
+                height: 25vh;
+              
+              }
+            
           }
         }
       }

@@ -19,8 +19,6 @@ const surname = document.getElementById('surname');
 const email_second = document.getElementById('emailRegister'); 
 const secondPassword = document.getElementById('passwordd');
 
-
-
 //pop up
 const openModal = () => {
 
@@ -64,7 +62,6 @@ const loginSide = () => {
 
 register.addEventListener('click',registerSide);
 login.addEventListener('click',loginSide);
-
 
 
 //login register
@@ -164,126 +161,7 @@ if(theme ==='darks'){
     } 
 
 
-//slide 
-const left = document.querySelector('.left');
-const right = document.querySelector('.right');
-const img_2 = document.querySelector('.img_2');
-
-let slidsArr = [
-
-{
-   name: 'product_1',
-   image: './assets/img/mainSlide.webp'
-},
-
-{
-   name: 'product_2',
-   image: './assets/img/mainSlide-2.jpg'
-},
-   
-]
-
-
-let index = 0;
-let slaytCount = slidsArr.length;
-let interval;
-
-let settings = {
-   duration:3500,
-   random:false
-   
-};
-
-
-timeSlide(settings);
-
-
-
-left.addEventListener('click', () =>{
-   index--;
-   showSlide(index);
-   if(index ===1){
-       img_2.classList.add('visible');
-       right.classList.add('green');
-       left.classList.remove('green')
-    }else if(index === 0){
-       img_2.classList.remove('visible')
-       right.classList.remove('green');
-       left.classList.add('green')
-    }
-   console.log(index)
-})
-
-right.addEventListener('click', () => {
-   index++;
-   showSlide(index);
-   if(index ===1){
-       img_2.classList.add('visible');
-       right.classList.add('green');
-       left.classList.remove('green')
-    }else if(index === 0){
-       img_2.classList.remove('visible')
-       right.classList.remove('green')
-       left.classList.add('green')
-    }
-
-    
-
-   console.log(index)
-})
-
-
-
-   function timeSlide(setting){
-       let prev;
-       interval= setInterval(function(){
-           if(settings.random){
-
-               do{
-                   index = Math.floor(Math.random() * slaytCount)
-               }while (index == prev);
-               prev =index
-           }else{
-
-             if(slaytCount == index + 1){
-               index = -1;
-             }
-
-
-             showSlide(index);
-             console.log(index)
-             index++
-           }
-           showSlide(index)
-
-           if(index ===1){
-               img_2.classList.add('visible');
-               right.classList.add('green');
-               left.classList.remove('green')
-            }else if(index === 0){
-               img_2.classList.remove('visible')
-               right.classList.remove('green');
-               left.classList.add('green')
-            }
-       },setting.duration)
-   }
-
-const showSlide = (i) =>{
-   if(i<0){
-       index = slaytCount -1
-       
-   }
-
-   if(i>=slaytCount){
-       index = 0
-   }
-
-   document.querySelector('.product_img').setAttribute('src',slidsArr[index].image);
-
-}
-
-
-//sidebar
+    //sidebar
 const sidebarIcon = document.getElementById('sidebarIcon');
 const productList = document.querySelector('.product_list');
 const closeBar = document.querySelector('.closeBarr')
@@ -313,8 +191,4 @@ closeBar.addEventListener('click', ()=> {
         closeBar.style.visibility = 'visible';
     }
 })
-
-
-
-
 

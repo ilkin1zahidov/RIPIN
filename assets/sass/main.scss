@@ -681,10 +681,12 @@ header {
   .e-commerce_slide {
     position: relative;
     overflow: hidden;
+    
     .img-slide {
       width: 100%;
       height: 95vh;
-      transition: all 5s;
+     
+      transition:all 3s;
       @include mobile {
         height: 79vh;
       }
@@ -697,6 +699,8 @@ header {
         object-fit: cover;
         background-repeat: no-repeat;
         filter: brightness(0.8);
+      
+        
       }
     }
 
@@ -994,6 +998,7 @@ main {
           object-fit: cover;
           border-radius: 1px;
           filter: brightness(0.9);
+          
 
       
 
@@ -1007,6 +1012,7 @@ main {
             border-radius: 2px;
           }
         }
+        
 
         .slide_head {
           position: absolute;

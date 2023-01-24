@@ -202,7 +202,7 @@ header {
           .new {
             cursor: pointer;
             a {
-              color: rgba(0, 0, 0, 0.5);
+              color: $main-color;
               transition: 0.7s;
             }
             &:hover {
@@ -220,7 +220,7 @@ header {
           .race {
             cursor: pointer;
             a {
-              color: rgba(0, 0, 0, 0.5);
+              color: $main-color;
             }
   
             &:hover {
@@ -238,7 +238,7 @@ header {
           .street {
             cursor: pointer;
             a {
-              color: rgba(0, 0, 0, 0.5);
+              color: $main-color;
             }
             &:hover {
               &::after {
@@ -255,7 +255,7 @@ header {
           .inside {
             cursor: pointer;
             a {
-              color: rgba(0, 0, 0, 0.5);
+              color: $main-color;
             }
   
             &:hover {
@@ -1205,6 +1205,16 @@ header {
           transition: 0.7s!important;
         }
       }
+
+      .product--inside{
+        img {
+          filter: brightness(0.7) !important;
+    
+          
+          &:hover {
+            filter: brightness(1.1) !important;
+          }
+      }
     }
   
     #contact--us{
@@ -1287,9 +1297,43 @@ header {
         }
       }
     }
+
+
+    #main--video{
+      video{
+        filter: brightness(0.5) !important;
+      }
+    }
+
+    .products{
+      .origin_gloves{
+        color: $main-color !important;
+      }
+      .price{
+        color: $main-color !important
+      }
+
+      .video_button {
+        .explore_button {
+          color: $dark-color !important;
+          background-color: $main-color !important;
+          border: 1px solid $main-color !important;
+
+
+          &:hover {
+            background-color: $dark-color !important;
+            border: 1px solid $dark-color !important;
+            color: $main-color !important;
+         
+          }
+        }
+      }
+    }
   }
 
   .active {
     visibility: visible !important;
     opacity: 1 !important;
   }
+
+}
