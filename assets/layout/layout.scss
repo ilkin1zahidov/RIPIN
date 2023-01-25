@@ -1,7 +1,7 @@
 
 @import "../abstract/mixin";
 @import "../abstract/variable";
-// @import "../layout/layout";
+
 header {
     #nav--head {
       width: 100%;
@@ -1097,6 +1097,24 @@ header {
     background-color: $bgdarkcolor;
     color: $main-color !important;
     
+    .hover_img{
+      filter:brightness(0.8) !important;
+    }
+
+    .hover_choose{
+      filter:brightness(0.8) !important;
+    }
+    .beanie{
+      color: $main-color !important;
+    }
+
+    .origin_gloves{
+      color: $main-color !important;
+    }
+
+    .price{
+      color: $main-color !important;
+    }
     .dropdown {
       a {
         color: $dark-color !important;
@@ -1219,6 +1237,9 @@ header {
             filter: brightness(1.1) !important;
           }
       }
+   
+      
+
     }
   
     #contact--us{

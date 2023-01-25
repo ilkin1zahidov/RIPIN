@@ -1080,6 +1080,21 @@ footer #contact--us .container .contact-support .support_all .contact a:hover {
   background-color: #142136;
   color: #f8f9fa !important;
 }
+.darks .hover_img {
+  filter: brightness(0.8) !important;
+}
+.darks .hover_choose {
+  filter: brightness(0.8) !important;
+}
+.darks .beanie {
+  color: #f8f9fa !important;
+}
+.darks .origin_gloves {
+  color: #f8f9fa !important;
+}
+.darks .price {
+  color: #f8f9fa !important;
+}
 .darks .dropdown a {
   color: #000000 !important;
 }
