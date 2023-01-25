@@ -1,3 +1,7 @@
+
+@import "../abstract/mixin";
+@import "../abstract/variable";
+// @import "../layout/layout";
 header {
     #nav--head {
       width: 100%;
@@ -153,7 +157,7 @@ header {
             height: 61px;
             width: 390px !important;
             opacity: 0;
-            visibility: hidden;
+            // visibility: hidden;
             padding: 22px 30px;
             .closeBar {
               position: absolute;
@@ -176,7 +180,7 @@ header {
             height: 61px;
             width: 767px !important;
             opacity: 0;
-            visibility: hidden;
+            // visibility: hidden;
             padding: 22px 32px;
             .closeBar {
               position: absolute;
@@ -1310,7 +1314,7 @@ header {
         color: $main-color !important;
       }
       .price{
-        color: $main-color !important
+        color: $main-color !important;
       }
 
       .video_button {
@@ -1331,9 +1335,11 @@ header {
     }
   }
 
-  .active {
-    visibility: visible !important;
-    opacity: 1 !important;
-  }
 
+}
+
+
+.active {
+  visibility: visible !important;
+  opacity: 1 !important;
 }

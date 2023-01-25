@@ -153,7 +153,6 @@ header .container .nav_head .product_list .closeBarr {
     height: 61px;
     width: 390px !important;
     opacity: 0;
-    visibility: hidden;
     padding: 22px 30px;
   }
   header .container .nav_head .product_list .closeBar {
@@ -177,7 +176,6 @@ header .container .nav_head .product_list .closeBarr {
     height: 61px;
     width: 767px !important;
     opacity: 0;
-    visibility: hidden;
     padding: 22px 32px;
   }
   header .container .nav_head .product_list .closeBar {
@@ -1265,7 +1263,8 @@ footer #contact--us .container .contact-support .support_all .contact a:hover {
   border: 1px solid #000000 !important;
   color: #f8f9fa !important;
 }
-.darks .active {
+
+.active {
   visibility: visible !important;
   opacity: 1 !important;
 }
