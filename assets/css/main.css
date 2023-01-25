@@ -942,17 +942,17 @@ main #product--main .my-container .products--card .card_one img {
   height: auto;
   -o-object-fit: cover;
      object-fit: cover;
-  border-radius: 2px;
+  border-radius: 2%;
 }
 @media (max-width: 767px) {
   main #product--main .my-container .products--card .card_one img {
     height: 20vh;
-    border-radius: 2px;
+    border-radius: 2%;
   }
 }
 @media (min-width: 768px) and (max-width: 991px) {
   main #product--main .my-container .products--card .card_one img {
-    border-radius: 2px;
+    border-radius: 2%;
   }
 }
 main #product--main .my-container .products--card .card_one img:hover {
@@ -987,12 +987,15 @@ main #info--slide .my-container .slide_all img {
   -o-object-fit: cover;
      object-fit: cover;
   border-radius: 1px;
+  filter: brightness(0.7);
+}
+main #info--slide .my-container .slide_all img:hover {
   filter: brightness(0.9);
 }
 @media (max-width: 767px) {
   main #info--slide .my-container .slide_all img {
     height: 24vh;
-    border-radius: 2px;
+    border-radius: 2%;
   }
 }
 @media (min-width: 768px) and (max-width: 991px) {
@@ -1099,10 +1102,11 @@ main #racewear .my-container .race img {
   width: 100%;
   height: auto;
   filter: brightness(0.9);
+  border-radius: 2%;
 }
 @media (max-width: 767px) {
   main #racewear .my-container .race img {
-    border-radius: 2px !important;
+    border-radius: 2% !important;
     height: 24vh !important;
   }
 }
@@ -1719,16 +1723,19 @@ footer #contact--us .container .contact-support .support_all .contact a:hover {
   color: #f8f9fa !important;
 }
 .darks .card_one img {
-  filter: brightness(0.9) !important;
+  filter: brightness(0.5) !important;
 }
 .darks .card_one img:hover {
-  filter: brightness(1.1) !important;
+  filter: brightness(0.9) !important;
 }
 .darks .login .close {
   color: #000000 !important;
 }
 .darks .slide_all img {
-  filter: brightness(0.7) !important;
+  filter: brightness(0.5) !important;
+}
+.darks .slide_all img:hover {
+  filter: brightness(1.1) !important;
 }
 .darks .race img {
   filter: brightness(0.7) !important;
