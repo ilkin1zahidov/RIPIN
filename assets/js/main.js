@@ -18,6 +18,11 @@ const username = document.getElementById('username');
 const surname = document.getElementById('surname');
 const email_second = document.getElementById('emailRegister'); 
 const secondPassword = document.getElementById('passwordd');
+const forms = document.getElementById('forms');
+const footer_email = document.getElementById('footer_email');
+const footer_name = document.getElementById('footer_name');
+
+
 
 
 
@@ -123,8 +128,8 @@ form.addEventListener('submit', function(e){
     e.preventDefault();
     checkEmail(email);  
     checkRequired([password]);
- 
-
+    checkLength(password,5,12)
+    
 })
 
 
@@ -139,6 +144,47 @@ form_second.addEventListener('submit', function(e){
     checkPasswords(secondPassword,repassword);
 })
 
+
+const trues = (input) => {
+input.style.border = '3px solid green'
+}
+
+
+const errors = (input) => {
+    input.style.border = '3px solid red'
+    }
+    
+
+const checkEmails = (input) =>{
+    const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+      if(re.test(input.value)){
+          trues(input);
+      }
+      else{
+            errors(input);
+      }
+};
+
+const checkName = (input,min,max) =>{
+    if(input.value === ''){
+        errors(input);
+    
+    }
+    else if(input.value.length < min ){
+        errors(input, `${input.id}  `)
+    }else if(input.value.length > max){
+        errors(input, `${input.id} `)
+    }else{
+        trues(input)
+    }
+}
+
+forms.addEventListener('submit', function(e){
+    e.preventDefault();
+    checkName(footer_name,3,7)
+    checkEmails(footer_email)
+    
+})
 
 //dark ligh mode
 
@@ -189,7 +235,7 @@ let slaytCount = slidsArr.length;
 let interval;
 
 let settings = {
-   duration:3500,
+   duration:4000,
    random:false
    
 };
@@ -211,7 +257,7 @@ left.addEventListener('click', () =>{
        right.classList.remove('green');
        left.classList.add('green')
     }
-   console.log(index)
+  
 })
 
 right.addEventListener('click', () => {
@@ -228,8 +274,6 @@ right.addEventListener('click', () => {
     }
 
     
-
-   console.log(index)
 })
 
 
@@ -251,7 +295,7 @@ right.addEventListener('click', () => {
 
 
              showSlide(index);
-             console.log(index)
+     
              index++
            }
            showSlide(index)
@@ -315,6 +359,59 @@ closeBar.addEventListener('click', ()=> {
 })
 
 
+//basket
 
+if(localStorage.getItem('basket') === null ){
+    localStorage.setItem('basket', JSON.stringify([]));
+}
+
+let buttons = document.querySelectorAll('.btn_add');
+
+for(let btn of buttons){
+    btn.addEventListener('click', function(e){
+        e.preventDefault();
+        let basket = JSON.parse(localStorage.getItem('basket'));
+        let prod_id = e.target.parentElement.parentElement.id;
+        let prod_img = e.target.parentElement.firstElementChild.src;
+        let prod_name = e.target.parentElement.firstElementChild.nextElementSibling.firstElementChild.innerHTML;
+        let prod_price = e.target.parentElement.firstElementChild.nextElementSibling.firstElementChild.nextElementSibling.innerHTML
+        
+
+        console.log(prod_id);
+        console.log(prod_img);
+        console.log(prod_name);
+        console.log(prod_price);
+
+
+        let existProd = basket.find(x => x.Id == prod_id);
+        console.log(existProd);
+
+        if(existProd === undefined){
+            basket.push({
+                Id: prod_id,
+                Image:prod_img,
+                Name:prod_name,
+                Price:prod_price,
+                Count: 1
+            })
+        }
+        else{
+            existProd.Count +=1
+        }
+
+
+        localStorage.setItem('basket', JSON.stringify(basket));
+        CountProduct();
+    })
+}
+
+
+
+function CountProduct() {
+    let basket = JSON.parse(localStorage.getItem('basket'));
+    document.getElementById('count').innerHTML = basket.length    
+}   
+
+CountProduct();
 
 

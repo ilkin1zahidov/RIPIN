@@ -19,7 +19,7 @@
                 <div class="nav_head">
                     <i id="sidebarIcon" class="fas bars sidebar  fa-bars"></i>
                     <a href="./index.html" class="nav-logo">
-                        <img src="./assets/img/mainLogo-2.png" alt="mainLogo-2">
+                        <img src="./assets/img/mainLogo-2.png" alt="">
                     </a>
                     <ul class="product_list">
                         <div class="closeBarr">
@@ -34,7 +34,13 @@
 
                     </ul>
                     <div class="icons">
-                        <i class="fa-solid fa-cart-shopping"></i>
+                            <a href="./basket.html"><i class="fa-solid shopping fa-cart-shopping"></i></a>
+                            <div class="basket_size">
+                                <sup id="count">0</sup>
+                            </div>
+                             
+                            
+                       
                         <i style="visibility: visible;" class="fa-solid user fa-user">
                             <img class="userss" src="./assets/img/user.svg" alt="">
                             <div class="common_log-reg">
@@ -133,6 +139,7 @@
 
 
 
+
         </section>
     </header>
     <main>
@@ -152,7 +159,7 @@
         <section id="product--lists">
             <div class="container">
                 <div class="all_products">
-                    <div class="products">
+                    <div id="1"  class="products">
                         <div class="product_info">
                             <p class="product_head">ORIGIN LINE</p>
                             <h2 class="origin_gloves">ORIGIN <br> GLOVES</h2>
@@ -165,7 +172,7 @@
                             </ul>
                             <form action="#">
                                 <a href="#" class="video_button">
-                                    <button class="explore_button">
+                                    <button class="explore_button btn_add">
                                         BUY
                                     </button>
                                 </a>
@@ -177,7 +184,7 @@
                     </div>
     
                        <div class="products">
-                        <div class="product_info">
+                        <div id="2" class="product_info">
                             <p class="product_head">ORIGIN LINE</p>
                             <h2 class="origin_gloves">ORIGIN <br> JERSEY</h2>
                             <span class="price">$59.99</span>
@@ -189,8 +196,8 @@
                                 <li>Tight fit</li>
                             </ul>
                             <form action="#">
-                                <a href="#" class="video_button">
-                                    <button class="explore_button">
+                                <a  href="#" class="video_button">
+                                    <button class="explore_button btn_add">
                                         BUY
                                     </button>
                                 </a>
@@ -202,7 +209,7 @@
                     </div>
 
                     <div class="products">
-                        <div class="product_info">
+                        <div id="3" class="product_info">
                             <p class="product_head">ORIGIN LINE</p>
                             <h2 class="origin_gloves">ORIGIN <br> PANTS</h2>
                             <span class="price">$179.99</span>
@@ -213,12 +220,12 @@
                                 <li>Closable front pocket</li>
                             </ul>
                             <form action="#">
-                                <a href="#" class="video_button">
-                                    <button class="explore_button">
+                                <a  href="#" class="video_button">
+                                    <button class="explore_button btn_add">
                                         BUY
                                     </button>
                                 </a>
-                            </form>
+                            </form> 
                         </div>
                         <div class="product_image">
                             <img src="./assets/img/list3.webp" alt="">
@@ -226,7 +233,7 @@
                     </div>
     
                        <div class="products">
-                        <div class="product_info">
+                        <div id="4" class="product_info">
                             <p class="product_head">ORIGIN LINE</p>
                             <h2 class="origin_gloves">ORIGIN <br> SOCKS</h2>
                             <span class="price">$19.99</span>
@@ -237,12 +244,12 @@
                                 <li>Lightweight</li>
                             </ul>
                             <form action="#">
-                                <a href="#" class="video_button">
-                                    <button class="explore_button">
+                                <a  href="#" class="video_button">
+                                    <button class="explore_button btn_add">
                                         BUY
                                     </button>
                                 </a>
-                            </form>
+                            </form> 
                         </div>
                         <div class="product_image">
                             <img src="./assets/img/list4.webp" alt="">
@@ -250,7 +257,7 @@
                     </div>
 
                     <div class="products">
-                        <div class="product_info">
+                        <div id="5" class="product_info">
                             <p class="product_head">ORIGIN LINE</p>
                             <h2 class="origin_gloves">ORIGIN <br> SOCKS</h2>
                             <span class="price">$19.99</span>
@@ -260,13 +267,13 @@
                                 <li>Comfortable wearing comfort</li>
                                 <li>Lightweight</li>
                             </ul>
-                            <form action="#">
+                        
                                 <a href="#" class="video_button">
-                                    <button class="explore_button">
+                                    <button class="explore_button btn_add">
                                         BUY
                                     </button>
                                 </a>
-                            </form>
+             
                         </div>
                         <div class="product_image">
                             <img src="./assets/img/list5.webp" alt="">
@@ -303,12 +310,14 @@
                                     off your first purchase NOW.
                                 </span>
                             </div>
-                            <form action="#">
-                                <input type="text" placeholder="Name">
-                                <input type="email" placeholder="email address"> <br>
+                            <form id="forms" action="#" >
+                                <input id="footer_name" type="text" class="name" placeholder="Name">
+                          
+                                <input id="footer_email" type="email" class="emails" placeholder="email address"> <br>
+                             
 
                                 <a href="#" class="video_button">
-                                    <button class="explore_button">
+                                    <button type="submit" class="explore_button">
                                         SUBSCRIBE
                                     </button>
                                 </a>

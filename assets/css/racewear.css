@@ -87,7 +87,6 @@ header .container .nav_head .product_list .closeBarr {
   header .container .nav_head .product_list .closeBarr .closeone {
     width: 24px;
     height: 2px;
-    color: #000000;
     position: absolute;
     left: -11px;
     transition: all 0.3s ease;
@@ -96,7 +95,7 @@ header .container .nav_head .product_list .closeBarr {
   header .container .nav_head .product_list .closeBarr .closeone:first-child {
     transform: rotate(45deg) translateY(-23px);
     transition: all 0.3s ease;
-    background-color: #000000;
+    background-color: #f8f9fa;
   }
   header .container .nav_head .product_list .closeBarr .closetwo {
     width: 24px;
@@ -107,7 +106,7 @@ header .container .nav_head .product_list .closeBarr {
     top: -44px;
   }
   header .container .nav_head .product_list .closeBarr .closetwo:last-child {
-    background-color: #000000;
+    background-color: #f8f9fa;
     transform: rotate(136deg) translateY(-19px);
     transition: all 0.3s ease;
   }
@@ -293,6 +292,38 @@ header .container .icons {
   justify-content: center;
   align-items: center;
   gap: 25px;
+}
+header .container .icons .shopping {
+  font-size: 16px;
+  margin-top: 6px;
+}
+header .container .icons .basket_size {
+  width: 14px;
+  height: 14px;
+  background-color: #ce3232;
+  position: absolute;
+  right: 127px;
+  top: 19px;
+  border-radius: 50%;
+}
+@media (max-width: 767px) {
+  header .container .icons .basket_size {
+    right: 68px;
+    top: 19px;
+  }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  header .container .icons .basket_size {
+    right: 94px;
+    top: 19px;
+  }
+}
+header .container .icons .basket_size sup {
+  font-size: 10px;
+  position: absolute;
+  left: 4px;
+  top: 8px;
+  color: #fff;
 }
 @media (max-width: 767px) {
   header .container .icons {
@@ -1459,4 +1490,9 @@ main #product--lists .all_products .products .product_image img {
   width: 100%;
   height: auto;
   border-radius: 2px;
+  transition: 0.9s;
+}
+main #product--lists .all_products .products .product_image img:hover {
+  transition: 0.9s;
+  transform: rotateY(180deg);
 }/*# sourceMappingURL=racewear.css.map */

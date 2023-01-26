@@ -18,6 +18,13 @@ const username = document.getElementById('username');
 const surname = document.getElementById('surname');
 const email_second = document.getElementById('emailRegister'); 
 const secondPassword = document.getElementById('passwordd');
+const forms = document.getElementById('forms');
+const footer_email = document.getElementById('footer_email');
+const footer_name = document.getElementById('footer_name');
+
+
+
+
 
 //pop up
 const openModal = () => {
@@ -62,6 +69,7 @@ const loginSide = () => {
 
 register.addEventListener('click',registerSide);
 login.addEventListener('click',loginSide);
+
 
 
 //login register
@@ -120,7 +128,7 @@ form.addEventListener('submit', function(e){
     e.preventDefault();
     checkEmail(email);  
     checkRequired([password]);
- 
+    checkLength(password,5,12)
 
 })
 
@@ -134,6 +142,48 @@ form_second.addEventListener('submit', function(e){
     checkLength(secondPassword,5,12);
     checkLength(repassword,5,12);
     checkPasswords(secondPassword,repassword);
+})
+
+
+const trues = (input) => {
+input.style.border = '3px solid green'
+}
+
+
+const errors = (input) => {
+    input.style.border = '3px solid red'
+    }
+    
+
+const checkEmails = (input) =>{
+    const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+      if(re.test(input.value)){
+          trues(input);
+      }
+      else{
+            errors(input);
+      }
+};
+
+const checkName = (input,min,max) =>{
+    if(input.value === ''){
+        errors(input);
+    
+    }
+    else if(input.value.length < min ){
+        errors(input, `${input.id}  `)
+    }else if(input.value.length > max){
+        errors(input, `${input.id} `)
+    }else{
+        trues(input)
+    }
+}
+
+forms.addEventListener('submit', function(e){
+    e.preventDefault();
+    checkName(footer_name,3,7)
+    checkEmails(footer_email)
+    
 })
 
 

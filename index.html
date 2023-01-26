@@ -34,7 +34,13 @@
 
                     </ul>
                     <div class="icons">
-                        <i class="fa-solid fa-cart-shopping"></i>
+                            <a href="./basket.html"><i class="fa-solid shopping fa-cart-shopping"></i></a>
+                            <div class="basket_size">
+                                <sup id="count">0</sup>
+                            </div>
+                             
+                            
+                       
                         <i style="visibility: visible;" class="fa-solid user fa-user">
                             <img class="userss" src="./assets/img/user.svg" alt="">
                             <div class="common_log-reg">
@@ -144,11 +150,7 @@
                     <p class="product_bys ">Discover our Origin Line - Designed </p>
                     <span class="product_byss">for your Offroad Performance</span>
                     <form action="#">
-                        <a href="#" class="video_button">
-                            <button class="explore_button">
-                                ORIGIN FILM
-                            </button>
-                        </a>
+                       
                         <a href="#" class="shop_button">
                             <button class="explore-button_second">
                                 Shop Now
@@ -169,42 +171,42 @@
         <section id="product--main">
             <div class="my-container">
                 <div class="products--card">
-                    <div class="card_one">
-                        <a href="#">
+                    <div class="card_one" id="1">
+                        <a class="btn_add" href="#">
                             <img src="./assets/img/product_1.webp" alt="">
                             <div class="card--body">
                                 <p class="card_name">Origin Jersey</p>
-                                <span class="card_price">59.99$</span>
+                                <span id="checkout" value="59.99$" class="card_price">59.99$</span>
                             </div>
                         </a>
 
                     </div>
-                    <div class="card_one">
-                        <a href="#">
+                    <div class="card_one" id="2">
+                        <a class="btn_add" href="#">
                             <img src="./assets/img/product_2.webp" alt="">
                             <div class="card--body">
                                 <p class="card_name">Origin Pants</p>
-                                <span class="card_price">59.99$</span>
+                                <span  id="checkout"  value="179.99$" class="card_price">179.99$</span>
                             </div>
                         </a>
 
                     </div>
-                    <div class="card_one">
-                        <a href="#">
+                    <div  class="card_one" id="3" >
+                        <a class="btn_add" href="#">
                             <img src="./assets/img/product_3.webp" alt="">
                             <div class="card--body">
                                 <p class="card_name">Origin Gloves</p>
-                                <span class="card_price">59.99$</span>
+                                <span  id="checkout"  value="34.99$" class="card_price">34.99$</span>
                             </div>
                         </a>
 
                     </div>
-                    <div class="card_one">
-                        <a href="#">
+                    <div class="card_one" id="4">
+                        <a class="btn_add" href="#">
                             <img src="./assets/img/product_4.webp" alt="">
                             <div class="card--body">
                                 <p class="card_name">Performance Socks</p>
-                                <span class="card_price">59.99$</span>
+                                <span  id="checkout"  value="19.99%" class="card_price">19.99$</span>
                             </div>
                         </a>
 
@@ -229,7 +231,7 @@
             <div class="my-container">
                 <div class="racewear_all">
                     <div class="race">
-                        <a href="#">
+                        <a href="#" >
                             <img src="./assets/img/slide-1.webp" alt="slide-1">
                             <h1 class="wear">Racewear</h1>
                             <a href="#" class="race_button">
@@ -240,7 +242,7 @@
                         </a>
                     </div>
                     <div class="race">
-                        <a href="#">
+                        <a href="#" >
                             <img src="./assets/img/slide-2.webp" alt="slide-2">
                             <h1 class="origin">Origin Pants</h1>
                             <a href="#" class="origin_button">
@@ -252,7 +254,7 @@
                     </div>
 
                     <div class="race">
-                        <a href="#">
+                        <a href="#" >
                             <img src="./assets/img/slide-3.webp" alt="slide-1">
                             <h1 class="street">Streetwear</h1>
                             <a href="#" class="street_button">
@@ -263,7 +265,7 @@
                         </a>
                     </div>
                     <div class="race">
-                        <a href="#">
+                        <a href="#" >
                                <img src="./assets/img/slide-4.webp" alt="slide-1">
                         <h1 class="basic">Basic T-shirt</h1>
                         <a href="#" class="basic_button">
@@ -299,12 +301,14 @@
                                     off your first purchase NOW.
                                 </span>
                             </div>
-                            <form action="#">
-                                <input type="text" placeholder="Name">
-                                <input type="email" placeholder="email address"> <br>
+                            <form id="forms" action="#" >
+                                <input id="footer_name" type="text" class="name" placeholder="Name">
+                          
+                                <input id="footer_email" type="email" class="emails" placeholder="email address"> <br>
+                             
 
                                 <a href="#" class="video_button">
-                                    <button class="explore_button">
+                                    <button type="submit" class="explore_button">
                                         SUBSCRIBE
                                     </button>
                                 </a>

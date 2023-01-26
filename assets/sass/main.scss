@@ -97,7 +97,7 @@ header {
             .closeone {
               width: 24px;
               height: 2px;
-              color: $dark-color;
+
               position: absolute;
               left: -11px;
               transition: all 0.3s ease;
@@ -105,7 +105,7 @@ header {
               &:first-child {
                 transform: rotate(45deg) translateY(-23px);
                 transition: all 0.3s ease;
-                background-color: $dark-color;
+                background-color: $main-color;
               }
             }
 
@@ -119,7 +119,7 @@ header {
               top: -44px;
 
               &:last-child {
-                background-color: $dark-color;
+                background-color: $main-color;
                 transform: rotate(136deg) translateY(-19px);
                 transition: all 0.3s ease;
               }
@@ -328,7 +328,34 @@ header {
       justify-content: center;
       align-items: center;
       gap: 25px;
+      position: relative;
 
+      .shopping {
+        font-size: 16px;
+        margin-top: 6px;
+      }
+      .basket_size {
+        width: 14px;
+        height: 14px;
+        background-color: $red-color;
+        position: absolute;
+        right: 87px;
+        top: -5px;
+        border-radius: 50%;
+
+        @include mobile {
+          right: 60px;
+          top: -5px;
+        }
+
+        sup {
+          font-size: 10px;
+          position: absolute;
+          left: 4px;
+          top: 8px;
+          color: #fff;
+        }
+      }
       @include mobile {
         gap: 11px;
       }
@@ -376,8 +403,8 @@ header {
           margin: 0 auto 62px;
           background-color: #f8f9fa;
           z-index: 2;
-          left: 524px;
-          top: 56px;
+          top: 61px;
+          left: -834px;
           .invalid-feedback {
             font-size: 15px;
             font-weight: 400;
@@ -393,15 +420,15 @@ header {
             }
           }
           @include mobile {
-            width: 390px;
+            width: 387px;
             height: 612px;
             top: 56px;
-            left: 0px;
+            left: -293px;
           }
 
           @include tablet {
-            left: 102px;
-            top: 78px;
+            left: -517px;
+            top: 53px;
             height: 600px;
           }
 
@@ -681,12 +708,11 @@ header {
   .e-commerce_slide {
     position: relative;
     overflow: hidden;
-    
+
     .img-slide {
       width: 100%;
       height: 95vh;
-     
-      transition:all 3s;
+
       @include mobile {
         height: 79vh;
       }
@@ -699,8 +725,8 @@ header {
         object-fit: cover;
         background-repeat: no-repeat;
         filter: brightness(0.8);
-      
-        
+
+        transition: all 0.3s;
       }
     }
 
@@ -834,24 +860,24 @@ header {
       .explore-button_second {
         position: absolute;
         bottom: 119px;
-        left: 779px;
-        width: 212px;
-        height: 50px;
-        background: $common-color;
+        left: 626px;
+        width: 244px;
+        height: 56px;
+        background: rgba(255, 255, 255, 0.3);
         transition: 0.7s;
-        border: 1px solid $common-color;
-        color: $main-color;
+        border: 1px solid rgba(255, 255, 255, 0.3);
         color: #f8f9fa;
+  
         border-radius: 35px;
         @include mobile {
-          bottom: 35px;
+          bottom: 63px;
           left: 82px;
           width: 209px;
           height: 47px;
         }
         @include tablet {
           bottom: 7%;
-          left: 410px;
+          left: 297px;
           width: 209px;
           height: 47px;
         }
@@ -866,7 +892,7 @@ header {
     .left {
       position: absolute;
       bottom: 48px;
-      left: 759px;
+      left: 729px;
       font-size: 10px;
       cursor: pointer;
 
@@ -883,7 +909,7 @@ header {
     .right {
       position: absolute;
       bottom: 48px;
-      left: 782px;
+      left: 759px;
       cursor: pointer;
       font-size: 10px;
 
@@ -999,15 +1025,13 @@ main {
           border-radius: 1px;
           filter: brightness(0.7);
 
-          &:hover{
+          &:hover {
             filter: brightness(0.9);
           }
-          
-      
 
           @include mobile {
             height: 24vh;
-            border-radius: 2% ;
+            border-radius: 2%;
           }
 
           @include tablet {
@@ -1015,7 +1039,6 @@ main {
             border-radius: 2px;
           }
         }
-        
 
         .slide_head {
           position: absolute;
@@ -1115,7 +1138,6 @@ main {
             height: 24vh !important;
           }
 
-          
           &:hover {
             filter: brightness(1.1);
           }
@@ -1186,7 +1208,7 @@ main {
       @include mobile {
         top: 276px;
         font-size: 28px;
-       right: 112px;
+        right: 112px;
         position: absolute;
       }
 
@@ -1210,7 +1232,7 @@ main {
         border-radius: 35px;
         font-size: 14px;
 
-        transition: 0.7s!important;
+        transition: 0.7s !important;
         &:hover {
           transition: 0.7s;
           background-color: $main-color;
@@ -1224,129 +1246,127 @@ main {
           height: 32px;
           top: 312px;
         }
-        }
-
-        @include tablet {
-          top: 128px;
-          right: 92px;
-        }
-      
-      }
-    }
-
-    .street {
-      position: absolute;
-      bottom: 247px;
-      left: 278px;
-      color: $main-color;
-      font-size: 42px;
-
-      @include mobile {
-        font-size: 28px;
-         position: absolute;
-         left: 116px;
-         bottom: 306px;
       }
 
       @include tablet {
-        bottom: 127px;
-        left: 83px;
-      }
-    }
-
-    .street_button {
-      .vieww_button {
-        position: absolute;
-        bottom: 195px;
-        left: 284px;
-        width: 197px;
-        height: 50px;
-        color: #f8f9fa;
-        transition: 0.7s;
-        background-color: rgba(255, 255, 255, 0.3);
-        border: 1px solid rgba(255, 255, 255, 0.3);
-        border-radius: 35px;
-        font-size: 14px;
-
-        @include mobile {
-          left: 28%;
-          font-size: 9px;
-          width: 150px;
-          height: 32px;
-          bottom: 285px;
-        }
-
-        @include tablet {
-          bottom: 81px;
-          left: 82px;
-        }
-
-        &:hover {
-          transition: 0.7s;
-          background-color: $main-color;
-          color: $dark-color;
-          cursor: pointer;
-        }
-      }
-    }
-
-    .basic {
-      position: absolute;
-      bottom: 247px;
-      right: 278px;
-      color: $main-color;
-      font-size: 42px;
-
-      @include mobile {
-        font-size: 28px;
-        position: absolute;
-        right: 29%;
-        bottom: 95px;
-      
-      }
-
-      @include tablet {
-        bottom: 127px;
-        right: 83px;
-      }
-    }
-
-    .basic_button {
-      .buyy_button {
-        position: absolute;
-        bottom: 195px;
-        right: 284px;
-        width: 197px;
-        height: 50px;
-        color: #f8f9fa;
-        transition: 0.7s;
-        background-color: rgba(255, 255, 255, 0.3);
-        border: 1px solid rgba(255, 255, 255, 0.3);
-        border-radius: 35px;
-        font-size: 14px;
-
-        @include mobile {
-          left: 30%;
-          font-size: 9px;
-          width: 150px;
-          height: 32px;
-          bottom: 74px;
-        }
-
-        @include tablet {
-          bottom: 81px;
-          right: 92px;
-        }
-
-        &:hover {
-          transition: 0.7s;
-          background-color: $main-color;
-          color: $dark-color;
-          cursor: pointer;
-        }
+        top: 128px;
+        right: 92px;
       }
     }
   }
+
+  .street {
+    position: absolute;
+    bottom: 247px;
+    left: 278px;
+    color: $main-color;
+    font-size: 42px;
+
+    @include mobile {
+      font-size: 28px;
+      position: absolute;
+      left: 116px;
+      bottom: 306px;
+    }
+
+    @include tablet {
+      bottom: 127px;
+      left: 83px;
+    }
+  }
+
+  .street_button {
+    .vieww_button {
+      position: absolute;
+      bottom: 195px;
+      left: 284px;
+      width: 197px;
+      height: 50px;
+      color: #f8f9fa;
+      transition: 0.7s;
+      background-color: rgba(255, 255, 255, 0.3);
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      border-radius: 35px;
+      font-size: 14px;
+
+      @include mobile {
+        left: 28%;
+        font-size: 9px;
+        width: 150px;
+        height: 32px;
+        bottom: 285px;
+      }
+
+      @include tablet {
+        bottom: 81px;
+        left: 82px;
+      }
+
+      &:hover {
+        transition: 0.7s;
+        background-color: $main-color;
+        color: $dark-color;
+        cursor: pointer;
+      }
+    }
+  }
+
+  .basic {
+    position: absolute;
+    bottom: 247px;
+    right: 278px;
+    color: $main-color;
+    font-size: 42px;
+
+    @include mobile {
+      font-size: 28px;
+      position: absolute;
+      right: 29%;
+      bottom: 95px;
+    }
+
+    @include tablet {
+      bottom: 127px;
+      right: 83px;
+    }
+  }
+
+  .basic_button {
+    .buyy_button {
+      position: absolute;
+      bottom: 195px;
+      right: 284px;
+      width: 197px;
+      height: 50px;
+      color: #f8f9fa;
+      transition: 0.7s;
+      background-color: rgba(255, 255, 255, 0.3);
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      border-radius: 35px;
+      font-size: 14px;
+
+      @include mobile {
+        left: 30%;
+        font-size: 9px;
+        width: 150px;
+        height: 32px;
+        bottom: 74px;
+      }
+
+      @include tablet {
+        bottom: 81px;
+        right: 92px;
+      }
+
+      &:hover {
+        transition: 0.7s;
+        background-color: $main-color;
+        color: $dark-color;
+        cursor: pointer;
+      }
+    }
+  }
+}
 
 footer {
   #contact--us {
@@ -1355,36 +1375,32 @@ footer {
     background-color: $footer-color;
     color: $main-color;
 
-   
     .container {
       width: 100%;
       height: auto;
       padding: 70px 90px;
- 
 
       @include mobile {
         padding: 40px 20px;
-
       }
 
       @include tablet {
         padding: 70px 10px;
       }
-      
+
       .contact--all {
         width: 100%;
         height: auto;
         display: flex;
-        @include mobile{
+        @include mobile {
           position: relative;
           flex-direction: column;
         }
-       
 
         .contact-login {
           width: 50%;
           height: auto;
-          @include mobile{
+          @include mobile {
             width: 100%;
           }
           .footer_logo {
@@ -1395,7 +1411,7 @@ footer {
               width: 43%;
             }
 
-            @include tablet{
+            @include tablet {
               width: 45% !important;
             }
 
@@ -1419,7 +1435,7 @@ footer {
               .news_info {
                 font-size: 13px;
 
-                @include mobile{
+                @include mobile {
                   display: none !important;
                 }
 
@@ -1428,7 +1444,7 @@ footer {
                 }
               }
 
-              .newss_info{
+              .newss_info {
                 display: none;
 
                 @include mobile {
@@ -1453,10 +1469,8 @@ footer {
                 margin-bottom: 14px;
                 color: $main-color;
 
-
-                @include mobile{
+                @include mobile {
                   width: 100%;
-
                 }
 
                 @include tablet {
@@ -1465,8 +1479,6 @@ footer {
                 &::placeholder {
                   color: $main-color;
                   font-size: 13px;
-             
-
                 }
               }
 
@@ -1482,9 +1494,8 @@ footer {
                   font-size: 13px;
                   margin-bottom: 50px;
 
-                  @include mobile{
+                  @include mobile {
                     width: 100%;
-
                   }
                   @include tablet {
                     width: 205px;
@@ -1506,7 +1517,6 @@ footer {
               position: absolute;
               bottom: -121px;
             }
-
           }
           .payments_text {
             color: $main-color;
@@ -1518,7 +1528,7 @@ footer {
               margin-bottom: 20px;
               margin-right: 16px;
               transition: 0.8s;
-              &:hover{
+              &:hover {
                 background-color: $green-color;
                 transition: 0.8s;
                 cursor: pointer;
@@ -1553,7 +1563,6 @@ footer {
 
         @include tablet {
           padding: 80px 0px;
-       
         }
         .support_all {
           display: flex;
@@ -1572,7 +1581,7 @@ footer {
               font-weight: 900;
               font-size: 15px;
               transition: 0.5s !important;
-              &:hover{
+              &:hover {
                 color: $main-color;
                 transition: 0.5s !important;
               }
@@ -1588,7 +1597,7 @@ footer {
               text-decoration: none;
               color: gray;
               transition: 0.7s;
-              &:hover{
+              &:hover {
                 color: $green-color;
                 transition: 0.5s;
               }
@@ -1598,28 +1607,25 @@ footer {
           .about {
             padding: 0px 53px;
 
-      
-
-            &:hover{
+            &:hover {
               color: $main-color;
             }
             @include mobile {
               padding: 0px 53px !important;
             }
             @include tablet {
-              padding: 0px !important
+              padding: 0px !important;
             }
             .about_head {
               color: $main-color;
               font-weight: 900;
               font-size: 15px;
               transition: 0.5s !important;
-              &:hover{
+              &:hover {
                 color: $main-color !important;
                 transition: 0.5s !important;
               }
             }
-     
 
             @include mobile {
               padding: 0px;
@@ -1629,7 +1635,6 @@ footer {
               padding: 12px 0px;
               font-size: 13px;
               @include mobile {
-           
                 padding: 6px 0px;
               }
             }
@@ -1637,7 +1642,7 @@ footer {
               text-decoration: none;
               color: gray;
               transition: 0.5s;
-              &:hover{
+              &:hover {
                 color: $green-color;
                 transition: 0.5s;
               }
@@ -1653,7 +1658,7 @@ footer {
               font-weight: 900;
               font-size: 15px;
               transition: 0.5s !important;
-              &:hover{
+              &:hover {
                 color: $main-color;
                 transition: 0.5s !important;
               }
@@ -1671,11 +1676,10 @@ footer {
               text-decoration: none;
               color: gray;
               transition: 0.5s;
-              &:hover{
+              &:hover {
                 color: $green-color;
                 transition: 0.5s;
               }
-              
             }
           }
         }
@@ -1687,7 +1691,7 @@ footer {
 .darks {
   background-color: $bgdarkcolor;
   color: $main-color !important;
-  
+
   .dropdown {
     a {
       color: $dark-color !important;
@@ -1747,7 +1751,7 @@ footer {
   .slide_all {
     img {
       filter: brightness(0.5) !important;
-      &:hover{
+      &:hover {
         filter: brightness(1.1) !important;
       }
     }
@@ -1757,101 +1761,97 @@ footer {
     img {
       filter: brightness(0.7) !important;
 
-      
       &:hover {
         filter: brightness(1.1) !important;
       }
-
-
     }
     .view_button {
       background-color: $dark-color !important;
       color: $main-color !important;
-      transition: 0.7s!important;
+      transition: 0.7s !important;
       &:hover {
         background: top !important;
         transition: 0.7s !important;
-        
       }
     }
     .vieww_button {
       background-color: $dark-color !important;
       color: $main-color !important;
-      transition: 0.7s!important;
+      transition: 0.7s !important;
       &:hover {
         background: top !important;
-        transition: 0.7s!important;
+        transition: 0.7s !important;
       }
     }
     .buy_button {
       background-color: $dark-color !important;
       color: $main-color !important;
-      transition: 0.7s!important;
+      transition: 0.7s !important;
       &:hover {
         background: top !important;
-        transition: 0.7s!important;
+        transition: 0.7s !important;
       }
     }
     .buyy_button {
       background-color: $dark-color !important;
       color: $main-color !important;
-      transition: 0.7s!important;
+      transition: 0.7s !important;
       &:hover {
         background: top !important;
-        transition: 0.7s!important;
+        transition: 0.7s !important;
       }
     }
   }
 
-  #contact--us{
-    .support{
-      .support_head{
+  #contact--us {
+    .support {
+      .support_head {
         transition: 0.5s !important;
-        &:hover{
+        &:hover {
           color: $main-color !important;
           transition: 0.5s !important;
         }
       }
 
-      a{
+      a {
         transition: 0.5s !important;
-        &:hover{
+        &:hover {
           color: $green-color !important;
           transition: 0.5s !important;
         }
       }
     }
 
-    .about{
-      .about_head{
+    .about {
+      .about_head {
         transition: 0.5s !important;
-        &:hover{
+        &:hover {
           color: $main-color !important;
           transition: 0.5s !important;
         }
       }
 
-      a{
+      a {
         transition: 0.5s !important;
-        &:hover{
+        &:hover {
           color: $green-color !important;
           transition: 0.5s !important;
         }
       }
     }
 
-    .contact{
-      .contact_head{
+    .contact {
+      .contact_head {
         transition: 0.5s !important;
-        &:hover{
+        &:hover {
           color: $main-color !important;
           transition: 0.5s !important;
         }
       }
 
-      a{
+      a {
         transition: 0.5s !important;
-        &:hover{
+        &:hover {
           color: $green-color !important;
           transition: 0.5s !important;
         }
@@ -1868,9 +1868,8 @@ footer {
       font-size: 13px;
       margin-bottom: 50px;
 
-      @include mobile{
+      @include mobile {
         width: 100%;
-
       }
       @include tablet {
         width: 205px;
@@ -1891,4 +1890,8 @@ footer {
 .active {
   visibility: visible !important;
   opacity: 1 !important;
+}
+
+.true{
+  border: 2px solid green;
 }

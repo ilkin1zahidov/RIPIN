@@ -211,6 +211,13 @@ main {
                 height: 25vh;
               
               }
+
+              transition: 0.9s;
+              
+              &:hover{
+                transition: 0.9s;
+                transform: rotateY(180deg);
+              }
             
           }
         }

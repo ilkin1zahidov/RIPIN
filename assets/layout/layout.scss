@@ -87,7 +87,7 @@ header {
               .closeone {
                 width: 24px;
                 height: 2px;
-                color: $dark-color;
+         
                 position: absolute;
                 left: -11px;
                 transition: all 0.3s ease;
@@ -95,7 +95,7 @@ header {
                 &:first-child {
                   transform: rotate(45deg) translateY(-23px);
                   transition: all 0.3s ease;
-                  background-color: $dark-color;
+                  background-color: $main-color;
                 }
               }
   
@@ -109,7 +109,7 @@ header {
                 top: -44px;
   
                 &:last-child {
-                  background-color: $dark-color;
+                  background-color: $main-color;
                   transform: rotate(136deg) translateY(-19px);
                   transition: all 0.3s ease;
                 }
@@ -318,6 +318,42 @@ header {
         justify-content: center;
         align-items: center;
         gap: 25px;
+        
+        .shopping{
+          font-size: 16px;
+          margin-top: 6px;
+        }
+          .basket_size{
+            width: 14px;
+            height: 14px;
+            background-color: #ce3232;
+            position: absolute;
+            right: 127px;
+            top: 19px;
+            border-radius: 50%;
+
+            @include mobile {
+              right: 68px;
+              top: 19px;
+            }
+
+            @include tablet {
+              right: 94px;
+              top: 19px;
+            }
+  
+            sup{
+              font-size: 10px;
+              position: absolute;
+              left: 4px;
+              top: 8px;
+              color: #fff;
+            }
+          }
+
+
+
+
   
         @include mobile {
           gap: 11px;

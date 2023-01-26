@@ -18,6 +18,11 @@ const username = document.getElementById('username');
 const surname = document.getElementById('surname');
 const email_second = document.getElementById('emailRegister'); 
 const secondPassword = document.getElementById('passwordd');
+const forms = document.getElementById('forms');
+const footer_email = document.getElementById('footer_email');
+const footer_name = document.getElementById('footer_name');
+
+
 
 
 
@@ -123,7 +128,7 @@ form.addEventListener('submit', function(e){
     e.preventDefault();
     checkEmail(email);  
     checkRequired([password]);
- 
+    checkLength(password,5,12)
 
 })
 
@@ -137,6 +142,48 @@ form_second.addEventListener('submit', function(e){
     checkLength(secondPassword,5,12);
     checkLength(repassword,5,12);
     checkPasswords(secondPassword,repassword);
+})
+
+
+const trues = (input) => {
+input.style.border = '3px solid green'
+}
+
+
+const errors = (input) => {
+    input.style.border = '3px solid red'
+    }
+    
+
+const checkEmails = (input) =>{
+    const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+      if(re.test(input.value)){
+          trues(input);
+      }
+      else{
+            errors(input);
+      }
+};
+
+const checkName = (input,min,max) =>{
+    if(input.value === ''){
+        errors(input);
+    
+    }
+    else if(input.value.length < min ){
+        errors(input, `${input.id}  `)
+    }else if(input.value.length > max){
+        errors(input, `${input.id} `)
+    }else{
+        trues(input)
+    }
+}
+
+forms.addEventListener('submit', function(e){
+    e.preventDefault();
+    checkName(footer_name,3,7)
+    checkEmails(footer_email)
+    
 })
 
 
@@ -164,126 +211,7 @@ if(theme ==='darks'){
     } 
 
 
-//slide 
-const left = document.querySelector('.left');
-const right = document.querySelector('.right');
-const img_2 = document.querySelector('.img_2');
-
-let slidsArr = [
-
-{
-   name: 'product_1',
-   image: './assets/img/mainSlide.webp'
-},
-
-{
-   name: 'product_2',
-   image: './assets/img/mainSlide-2.jpg'
-},
-   
-]
-
-
-let index = 0;
-let slaytCount = slidsArr.length;
-let interval;
-
-let settings = {
-   duration:3500,
-   random:false
-   
-};
-
-
-timeSlide(settings);
-
-
-
-left.addEventListener('click', () =>{
-   index--;
-   showSlide(index);
-   if(index ===1){
-       img_2.classList.add('visible');
-       right.classList.add('green');
-       left.classList.remove('green')
-    }else if(index === 0){
-       img_2.classList.remove('visible')
-       right.classList.remove('green');
-       left.classList.add('green')
-    }
-   console.log(index)
-})
-
-right.addEventListener('click', () => {
-   index++;
-   showSlide(index);
-   if(index ===1){
-       img_2.classList.add('visible');
-       right.classList.add('green');
-       left.classList.remove('green')
-    }else if(index === 0){
-       img_2.classList.remove('visible')
-       right.classList.remove('green')
-       left.classList.add('green')
-    }
-
-    
-
-   console.log(index)
-})
-
-
-
-   function timeSlide(setting){
-       let prev;
-       interval= setInterval(function(){
-           if(settings.random){
-
-               do{
-                   index = Math.floor(Math.random() * slaytCount)
-               }while (index == prev);
-               prev =index
-           }else{
-
-             if(slaytCount == index + 1){
-               index = -1;
-             }
-
-
-             showSlide(index);
-             console.log(index)
-             index++
-           }
-           showSlide(index)
-
-           if(index ===1){
-               img_2.classList.add('visible');
-               right.classList.add('green');
-               left.classList.remove('green')
-            }else if(index === 0){
-               img_2.classList.remove('visible')
-               right.classList.remove('green');
-               left.classList.add('green')
-            }
-       },setting.duration)
-   }
-
-const showSlide = (i) =>{
-   if(i<0){
-       index = slaytCount -1
-       
-   }
-
-   if(i>=slaytCount){
-       index = 0
-   }
-
-   document.querySelector('.product_img').setAttribute('src',slidsArr[index].image);
-
-}
-
-
-//sidebar
+    //sidebar
 const sidebarIcon = document.getElementById('sidebarIcon');
 const productList = document.querySelector('.product_list');
 const closeBar = document.querySelector('.closeBarr')
@@ -315,6 +243,70 @@ closeBar.addEventListener('click', ()=> {
 })
 
 
+//basket
+
+function getProducts() {
+let basket = JSON.parse(localStorage.getItem('basket'));
+
+if(basket.length === 0){
+    let alert_div = '0';
+
+    alert_div  = `
+    <div class="alert text-center alert-danger" role="alert">
+    Basket is empty!
+        </div>
+    `
+
+    document.getElementById('list').innerHTML = alert_div
+}
+else{
+    let div = '';
+
+    basket.forEach(item => {
+        div+= `
+        <div class="box d-flex justify-content-between align-items-center">
+        <div class="col-lg-2">
+            <img src=${item.Image} alt="">
+        </div>
+        <div class="col-lg-3">
+            <h5>Mehsulun adi: ${item.Name}</h5>
+        </div>
+        <div class="col-lg-2">
+            <h6>Qiymet: ${item.Price}</h6>
+        </div>
+        <div class="col-lg-2">
+            <span>Count: ${item.Count}</span>
+        </div>
+    </div>
+        
+        `
+    })
+
+    document.getElementById('list').innerHTML = div;
+}
+}
+
+
+getProducts();
+
+
+function Clear() {
+    let basket = JSON.parse(localStorage.getItem('basket'));
+    basket.length = 0;
+    localStorage.setItem('basket', JSON.stringify(basket))
+    getProducts();
+    countProduct();
+
+}
+
+
+
+function countProduct() {
+    let basket = JSON.parse(localStorage.getItem('basket'));
+    document.getElementById('count').innerHTML = basket.length
+}
+
+countProduct();
 
 
 

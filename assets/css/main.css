@@ -100,7 +100,6 @@ header .container .nav_head .product_list .closeBarr {
   header .container .nav_head .product_list .closeBarr .closeone {
     width: 24px;
     height: 2px;
-    color: #000000;
     position: absolute;
     left: -11px;
     transition: all 0.3s ease;
@@ -109,7 +108,7 @@ header .container .nav_head .product_list .closeBarr {
   header .container .nav_head .product_list .closeBarr .closeone:first-child {
     transform: rotate(45deg) translateY(-23px);
     transition: all 0.3s ease;
-    background-color: #000000;
+    background-color: #f8f9fa;
   }
   header .container .nav_head .product_list .closeBarr .closetwo {
     width: 24px;
@@ -120,7 +119,7 @@ header .container .nav_head .product_list .closeBarr {
     top: -44px;
   }
   header .container .nav_head .product_list .closeBarr .closetwo:last-child {
-    background-color: #000000;
+    background-color: #f8f9fa;
     transform: rotate(136deg) translateY(-19px);
     transition: all 0.3s ease;
   }
@@ -308,6 +307,33 @@ header .container .icons {
   justify-content: center;
   align-items: center;
   gap: 25px;
+  position: relative;
+}
+header .container .icons .shopping {
+  font-size: 16px;
+  margin-top: 6px;
+}
+header .container .icons .basket_size {
+  width: 14px;
+  height: 14px;
+  background-color: #ce3232;
+  position: absolute;
+  right: 87px;
+  top: -5px;
+  border-radius: 50%;
+}
+@media (max-width: 767px) {
+  header .container .icons .basket_size {
+    right: 60px;
+    top: -5px;
+  }
+}
+header .container .icons .basket_size sup {
+  font-size: 10px;
+  position: absolute;
+  left: 4px;
+  top: 8px;
+  color: #fff;
 }
 @media (max-width: 767px) {
   header .container .icons {
@@ -359,8 +385,8 @@ header .container .icons .user .login-row {
   margin: 0 auto 62px;
   background-color: #f8f9fa;
   z-index: 2;
-  left: 524px;
-  top: 56px;
+  top: 61px;
+  left: -834px;
 }
 header .container .icons .user .login-row .invalid-feedback {
   font-size: 15px;
@@ -375,16 +401,16 @@ header .container .icons .user .login-row .invalid-feedback {
 }
 @media (max-width: 767px) {
   header .container .icons .user .login-row {
-    width: 390px;
+    width: 387px;
     height: 612px;
     top: 56px;
-    left: 0px;
+    left: -293px;
   }
 }
 @media (min-width: 768px) and (max-width: 991px) {
   header .container .icons .user .login-row {
-    left: 102px;
-    top: 78px;
+    left: -517px;
+    top: 53px;
     height: 600px;
   }
 }
@@ -652,7 +678,6 @@ header .e-commerce_slide {
 header .e-commerce_slide .img-slide {
   width: 100%;
   height: 95vh;
-  transition: all 3s;
 }
 @media (max-width: 767px) {
   header .e-commerce_slide .img-slide {
@@ -671,6 +696,7 @@ header .e-commerce_slide .img-slide .product_img {
      object-fit: cover;
   background-repeat: no-repeat;
   filter: brightness(0.8);
+  transition: all 0.3s;
 }
 header .e-commerce_slide .product_name {
   position: absolute;
@@ -804,19 +830,18 @@ header .e-commerce_slide .video_button .explore_button:hover {
 header .e-commerce_slide .shop_button .explore-button_second {
   position: absolute;
   bottom: 119px;
-  left: 779px;
-  width: 212px;
-  height: 50px;
+  left: 626px;
+  width: 244px;
+  height: 56px;
   background: rgba(255, 255, 255, 0.3);
   transition: 0.7s;
   border: 1px solid rgba(255, 255, 255, 0.3);
-  color: #f8f9fa;
   color: #f8f9fa;
   border-radius: 35px;
 }
 @media (max-width: 767px) {
   header .e-commerce_slide .shop_button .explore-button_second {
-    bottom: 35px;
+    bottom: 63px;
     left: 82px;
     width: 209px;
     height: 47px;
@@ -825,7 +850,7 @@ header .e-commerce_slide .shop_button .explore-button_second {
 @media (min-width: 768px) and (max-width: 991px) {
   header .e-commerce_slide .shop_button .explore-button_second {
     bottom: 7%;
-    left: 410px;
+    left: 297px;
     width: 209px;
     height: 47px;
   }
@@ -838,7 +863,7 @@ header .e-commerce_slide .shop_button .explore-button_second:hover {
 header .e-commerce_slide .left {
   position: absolute;
   bottom: 48px;
-  left: 759px;
+  left: 729px;
   font-size: 10px;
   cursor: pointer;
 }
@@ -857,7 +882,7 @@ header .e-commerce_slide .left {
 header .e-commerce_slide .right {
   position: absolute;
   bottom: 48px;
-  left: 782px;
+  left: 759px;
   cursor: pointer;
   font-size: 10px;
 }
@@ -1856,4 +1881,8 @@ footer #contact--us .container .contact-support .support_all .contact a:hover {
 .active {
   visibility: visible !important;
   opacity: 1 !important;
+}
+
+.true {
+  border: 2px solid green;
 }/*# sourceMappingURL=main.css.map */
